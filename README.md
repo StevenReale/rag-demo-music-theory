@@ -23,7 +23,7 @@ It’s intentionally simple, console-based, and heavily commented to make the RA
     - top `K` `ScoredChunk`s
     - a stitched `contextText` of sources
 - **Generation**:
-  - Calls `gpt-4o-mini` (cheap chat model) with:
+  - Calls `gpt-5-nano` (cheap chat model) with:
     - system instructions (“answer using only these sources”)
     - user message containing `Question + Sources`
 - **Interactive CLI**:
