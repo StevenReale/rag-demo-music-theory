@@ -1,0 +1,16 @@
+# Node
+node_modules/
+dist/
+coverage/
+
+# Environment / secrets
+.env
+
+# Local data / caches
+data/embeddings.json
+
+# OS/editor cruft
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
