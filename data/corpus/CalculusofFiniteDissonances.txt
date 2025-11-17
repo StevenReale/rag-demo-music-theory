@@ -1,0 +1,474 @@
+﻿The Calculus of Finite (Metric) Dissonances
+Steven Reale
+Abstract: “Metric dissonance” is a term borrowed from the realm of pitch relationships, but many studies of metric dissonance draw primarily from a conception of dissonance based on the relative complexities of frequency ratios while downplaying the important syntactical aspect that dissonance plays in tonal music. This article develops existing models of metric dissonance, most notably that of Harald Krebs, by formalizing them through the calculus of finite differences, thereby introducing a methodology for quantifying metric dissonance. Such a formalization not only establishes a heuristic for comparing musical passages but also suggests an experiential model for hearing metrically-dissonant music.
+Keywords: metric dissonance, discrete calculus, Phish, Conlon Nancarrow, Elliott Carter, Beethoven, Brahms
+
+Musicians have long observed similitudes between the realms of pitch and rhythm, and many have exploited this resemblance in their compositional or analytic practices.1 Accordingly, the correspondence forms the basis of one of the most pervasive models of metric dissonance found in current theoretical research: Maury Yeston’s study of interactions among rhythmic strata as extended by Harald Krebs.2 Yeston notes the pitch-based metaphor inherent in his terms “rhythmic consonance” and “rhythmic dissonance”:
+[A structure] in which the rate of motion in a piece can be expressed as a simple multiplication or division (by an integer greater than 1) of the rate of any other level of motion in the piece […] may be characterized, metaphorically, as rhythmic consonance … [while the] second broad category under discussion extends the convenient metaphor and may be characterized as rhythmic dissonance.3 
+Krebs built upon Yeston’s theory by adding an additional category of metric dissonance and creating formal labels for each type: Gx/y describes “grouping dissonances,” where x and y refer to the cardinality of each stratum such that x>y, and Dx+a describes “displacement dissonances,” where x reflects the cardinality shared by both layers and a represents the number of rhythmic units by which the secondary stratum is shifted.4
+
+In general, studies of metric dissonance have not explicitly acknowledged a complication that arises from the fact that in the realm of pitch, consonance and dissonance can describe two different kinds of relationships. On the one hand, a syntactic conception of consonance frames dissonance as a resolution-seeking instability. This view, which may be called “dynamic dissonance,” would frame the diatonic augmented fourth in a major key as a pair of active tones, ^4 and ^7, each seeking to resolve to the stable tones ^3 and ^1, and thus to the consonance of a minor sixth. Tonal music theory often describes such processes in grammatical terms: theorists might model the resolution of a V4/2 to I6 as occurring precisely because ^4, a chordal seventh, seeks a downward resolution while ^7, the leading tone, seeks an upward one; thus the simultaneous resolution of these two tendencies brings about—as though by pure happenstance—the resulting consonance. This reading lacks an acknowledgment of the aural reality that, even in the absence of a tonal grammar, augmented fourths sound more discordant than minor sixths, a fact better explained by what may be called the “static” conception of dissonance, a purely acoustic definition that correlates simple frequency ratios to concordant effects and complex frequency ratios to discordant ones. In this view, the augmented fourth is considered dissonant simply because, assuming just intonation, the ratio of 45:32 is considerably more complex than the minor sixth’s 8:5; but the static conception of dissonance fails to adequately explain why the first ratio ought to resolve to the second. In practice, then, tonal theorists are likely to incorporate some synthesis of these two aspects in their conceptions of dissonance.5
+
+The discursive stream exemplified by Yeston and Krebs primarily engages a static conception of metric dissonance that is centrally focused on ratios among strata, but many metrically-dissonant musics are concerned with syntactical processes of metric resolution that correspond to a dynamic conception of dissonance, such as the canons of Conlon Nancarrow6 and the phase music of Steve Reich.7 Others are centered on thwarting expected metric resolutions, as in Messiaen’s “Liturgie de cristal” from the Quatuor pour la fin du temps8 and the ostinato cycles in Stravinsky’s Symphony of Psalms.9 So, too, has much of the theoretical discourse on metric dissonance sought ways of extending the pitch metaphor to introduce syntactic notions of metric resolution. David Lewin and Richard Cohn have both imbued various hypermetric structures with the functional labels “tonic,” “subdominant,” and “dominant,” in the course of analyzing metric progressions, and though these functional labels do not describe dissonances per se, they do capture a sense of syntactic progression toward resolution.10 Krebs is careful to include structures of metric progression in his book Fantasy Pieces, such as by showing that a hemiola induces an expectation for resolution to metric consonance through a return to an uncomplicated triple meter, often concurrently with a cadence’s harmonic resolution.11 A shortcoming of these theories of metric progression is that they do not consider resolutions to be processes inherent to the interaction between the participating metric structures, but rather they assign functional categories to the metric structures on extra-metrical bases. However, Samuel Ng’s model of the hemiolic cycle is exceptional for capturing the process by which metric dissonance can resolve to consonance in purely metrical terms, as well as for interpreting grouping and displacement dissonances as both foreground and background events. While Ng’s model functions without recourse to an analogic reliance on tonal progression, it is at present limited in scope to the hemiola in a triple-meter context.12
+
+Rather than viewing resolutions as occurring when one metric system gives way to another, the present article specifically focuses on metric resolutions (and non-resolutions) as moments of metric alignment that arise from the immanent properties of a metrically-dissonant structure, for now limiting the scope of study to localized events. To clarify, consider a pair of motivating examples: Example 1 considers the canon between the outer voices in the A theme of Brahms’s Intermezzo, Op. 119, No. 1. Durational accents in the theme that occur every dotted quarter note as well as melodic contour establish a metric layer of cardinality 6 with respect to the constant sixteenth-note pulse stream. Since the left hand repeats the upper-voice gestures two sixteenth notes later, D6+2 is an appropriate Krebs label.13 Example 2 presents a reduction of the Menuet in Beethoven’s Symphony No. 8, III. Here, the melodic line’s hemiola (with a cardinality of four eighth notes, a grouping emphasized by alternations between string and woodwind orchestrations) conflicts with the prevailing triple meter that persists in the bass line (with a cardinality of six eighth notes). Thus, the Krebs label G6/4 is appropriate.14 
+
+Example 1. Brahms, Op. 119, No. 1, mm. 12–15. 
+
+Example 2. Beethoven, Symphony No. 8, III, mm. 20-26.
+
+The Krebs labels establish a convenient taxonomy for highlighting the differences and similarities among various metrically-dissonant passages, but they do not provide ready answers for other questions a theorist might have. For example, without some change in the music, will either of these metric dissonances resolve to consonance? Both intuitively and as formalized by Krebs,15 it is a reasonable expectation that grouping dissonances will periodically realign and that displacement dissonances will not, but the Krebs labels are not underwritten by a formalism that theorizes that distinction from the standpoint of process-driven mechanisms of dissonance presentation and resolution. Other questions might include: which of these events is more metrically dissonant? Is there a general rule as to whether grouping dissonances are more or less intense than displacement dissonances? Although Krebs provides a list of criteria to help distinguish between “strong” and “weak” dissonances,16 it would be useful to have a formalized method for measuring degrees of dissonance, allowing for the quick comparison of diverse metric events. 
+       A final question,: what is the Krebs label for the metric consonance to which the Beethoven hemiola resolves? Krebs suggests labeling consonances with ratios describing the two primary pulse layers. The baseline consonance for this 3/4 passage—and virtually every normative 3/4 passage—would be described by the ratio 6/2.17 There are two shortcomings with such a label: first, the ratio notation resembles the notation for the grouping dissonance—and indeed, we might say that the Beethoven hemiola resolution is described by a move from G6/4 to 6/2. The problem is that it is unclear how a displacement dissonance relates to its normative consonance. When Brahms ends the canon, the metrical change would be described by a move from D6+2 to 6/2. The fact that both of these examples resolve to the same consonance illustrates the second shortcoming: on the one hand, these two passages are described by the same consonance even though they appear in two different meters, while on the other hand, consonances describing two passages in a different set of meters (e.g. 4/4 and 6/8) would appear to be categorically distinct (8/2 and 6/3). Is there a way of formalizing metric consonance that is both intuitively related to all forms of metric dissonance while at the same time capturing the fundamental similarity among all forms of metric consonance? 
+To answer these questions, the present article extends Krebs’s theory by proposing a generalizable model that synthesizes the static and dynamic qualities of metric dissonance and captures new aspects that have yet to be fully theorized. Framing metric dissonance as a quantifiable entity is a necessary entry point into studying two specific properties of different kinds of metric dissonance. First, it permits the study of how quantities of dissonance change over time, offering a mathematical model for the experience of listening to metrically-dissonant music. Second, tallying the total quantities of metric dissonance over given spans of time creates an entryway into theorizing about how metric dissonance may accumulate and how that accumulation might impact the perceived relative intensities of dissonance among disparate passages. To accomplish these ends, I define a quantity of metric dissonance as the distance between an expected and an actual onset and construct a mathematical sequence indicating quantities of dissonance at each of a series of time points. I then employ the branch of mathematics known as “discrete calculus,” or the “calculus of finite differences,” to analyze the manner in which quantities of dissonance change and accumulate over time.18 Because the intended audience for this article includes those who may not have a background in mathematics, Online Appendix 1 provides a brief primer of the relevant aspects of discrete calculus.
+
+The central interpretive insight of this paper is that the operations of summation and difference create a multi-layered complex of interrelated sequences, each providing interpretive information about the others, with the caveat that some information may be lost under each operation. The complex is sketched in Example 3: arrows on the left of the diagram represent the summation operation and those on the right represent the backward difference operation.19
+ 
+Example 3. Relationships among levels of summation and difference.
+
+MUSICAL APPLICATIONS
+
+The calculus of finite differences can provide a means of synthesizing the static logic of the prevailing models of metric dissonance with a teleologically-oriented notion of metric resolution. As the present model claims that a quantity of metric dissonance is the durational distance between two associated metrical onsets and constructs a mathematical sequence of these distances as they occur over the course of a musical passage,20 the claim therefore implies the existence of at least two metrical structures.21 In the simplest case, a default meter either reflects (1) a notated meter, (2) an implied meter that conflicts with the notated meter but has been active long enough for a listener to reasonably conclude that it has been notated some other way, or (3), in the case of non-notated music, a culturally-understood, implied metric grid. By contrast, an actualized meter represents the metric structure(s) articulated by the voices present in the musical texture.22 In this situation, any active pulse streams that actualize the default meter are taken to be metrically consonant, while pulse streams that reflect some perturbation of the default meter are taken to be metrically dissonant. 
+
+Different kinds of metric dissonances may associate attacks in different ways. For example, in the case of a simple displacement dissonance like a canon, this model asserts that a listener will recognize the association between a melody and its echo and understand them as entities that could sound together, but are instead presented in displacement. In the case of a simple grouping dissonance like a hemiola, this model asserts that a listener will perceive conflicting beat structures conceptually as entities that could sound together, but instead appear in periodic cycles of alignment/non-alignment. Since a displacement dissonance generally represents a temporal offset of two strata with a common cardinality, it makes sense to associate the starting points of each grouping. This follows the convention of the Krebs label Dx+a, where a can also be taken to represent what Kyle Gann calls the “echo distance”23 between two associated onsets. By contrast, grouping dissonances represent events where two or more pulse streams of different cardinalities are articulated concurrently and so the procedure for associating attacks in displacement dissonances cannot function here. Where a hierarchy allows the listener to parse the pulses into categories of strong and weak, it makes sense to associate a strong pulse in one stratum to the nearest strong pulse in another stratum. Again, this follows the convention of the Krebs label Gx/y, which indicates the presence of the strata of cardinality x and y respectively and suggests a kinship between the onsets of each grouping of x and y. Note that by definition, y<x, and that there will be fewer groupings of cardinality x: desiring a one-to-one relationship between associated onsets, it is important that this model associate an onset in the stratum of cardinality x with the nearest onset in the stratum of cardinality y, regardless of which stratum may actualize the default meter. In some cases, there may be onsets in the y stratum that are not considered at all.
+
+These definitions may strike the reader as laying out a rather exotic conceptualization of metric dissonance. For example, this model might assert that a dissonance D6+6 features a quantity of 6 pulses worth of dissonance. However, strictly speaking, from the standpoint of meter, the two strata are aligned and thus there ought to be no dissonance at all. But for an analyst to even label a phenomenon as D6+6 in the first place is to assert that some musical features exist that imply an important association between strata that would be obscured by the label D6+0, and Callender specifically relies on such features in his study of Nancarrow canons:
+As an aid to perceiving the echo, Nancarrow often provides what may be called salient markers– gestures which the listener can easily perceive and retain, and compare the elapsed time between their appearance in one voice and another. These gestures often take the form of texturally distinct figures such as trills, glissandi, staccato chord punctuations, etc.24
+
+We shall encounter some such salient markers in Nancarrow’s Canon B below, but a similar principle obtains in simpler canons as well: in a strict canon where one voice enters exactly one measure after the first, the listener may associate the melodic incipits and perceive the one-measure displacement between their entries even though both entries may actualize the canon’s default meter.
+
+The sequence describing a metric dissonance represents an encoding of a metric event in a musical texture into the language of mathematics. The sequences that result after applying the operations of summation and difference create a model for the perceived effect of metrically-dissonant music.25 Since the backward difference creates a sequence indicating moment-by-moment changes of the basic sequence, it may be used to model a listener’s experience of changing amounts of dissonance over time, allowing one to answer the question: “does this passage become more or less dissonant as it progresses, or does the amount of dissonance stay the same?” By contrast, the summation creates a sequence that models how dissonance accumulates over a given span of time, allowing one to answer questions like: “how dissonant is this passage?” or; “which of these two passages is the more dissonant?”
+
+The concept of accumulating dissonance may seem abstract, but there are precedents for concepts like it in Roeder’s and Lewin’s studies of accent and entropy.26 Bach’s Prelude in C major from Book 1 of The Well-Tempered Clavier provides a concrete example of how dissonance may accumulate in the realm of pitch. During the extended pedal point on the dominant, Bach twice sets up and thwarts cadential resolution to the tonic: first in m. 28, and again in m. 32., Bach builds anticipation for the final tonic precisely by deferring it; and the 11-measure cadential preparation creates more tension than would an 8-measure or a 4-measure cadential preparation. The dissonant event thus becomes more dissonant the longer it is maintained.
+
+As a final preliminary, it is important to acknowledge Justin London’s research showing that, cognitively speaking, polymeter cannot exist because listeners can only attend to one meter at a time: “when confronted with complex polyrhythmic stimuli, listeners use one of two metric strategies. They will either (1) extract a composite pattern from all of the rhythmic streams present and then match it to a suitable metric framework; or (2) focus on one rhythmic stream and entrain to its meter while treating the other rhythmic stream(s) as ‘noise.’”27 In these terms, the quantity of metric dissonance associated with each attack in the default meter could be understood as the “volume” of perceived rhythmic noise, and this conception will be particularly useful when, as we will consider below, quantities of metric dissonance grow beyond reasonable perceptibility. Beyond this, while acknowledging the cognitive basis for the results of London’s research, the present study maintains the conceptual validity of polymeter as a compositional process and employs the term when a piece features multiple musical voices that can be heard to operate in different meters that are clearly articulated when heard in isolation.
+
+We may now model the displacement dissonance created by the Brahms canon in Example 1. The moment in question follows three measures of descending arpeggios where the final sixteenth note of each measure functions as an anacrusis to the downbeat of the measure that follows. While these arpeggios do not strongly confirm the notated 3/8 meter (as it might be possible to understand them in 6/16), they do not conflict with it either, so let us consider 3/8 to be the default meter; the melody in the upper voice actualizes this meter, while the melody in the lower voice actualizes a displacement of it.
+
+The passage may be represented by a sequence that assigns to each attack in the upper voice the metric distance to its associated attack in the lower voice, calibrating the measurements to the same sixteenth-note pulse stream as determined in Example 1 (although as will be discussed below, this arbitrary choice can be scaled to any convenient rhythmic unit). If t=0 represents the downbeat of the first measure of the example and each tick of t represents each sixteenth-note in the right hand, then the function returns the distance from each attack in the right hand to its associated attack in the left hand; these results are plotted in Example 4. Since this is a strict displacement canon, 〖Brahms〗_t=2 for all attacks in the domain, and the canon, therefore, represents a constant function of metric dissonance, which is made clear by examining the plotting in Example 4. By definition, the output of a constant function will not change regardless of changes in the input, and we formalize this fact by noting that the backward difference of any constant sequence is 0:28
+〖Brahms〗_t=2
+∇〖Brahms〗_t=〖Brahms〗_t-〖Brahms〗_(t-1)
+∇〖Brahms〗_t=2-2
+∇〖Brahms〗_t=0
+Since there is never any change in dissonance over the course of this canon, finding the backward difference reveals that a displacement canon represents a stable metric dissonance that will not resolve to metric consonance unless the composer breaks it off, and thus the backward difference formalizes Krebs’s observation that in a displacement dissonance, “[n]o matter how long two identical but nonaligned interpretive layers are associated, they can never meet[.]”29 These two sequences further suggest a phenomenological model for how a listener experiences a displacement dissonance: such a listener may perceive a constant degree of dissonance throughout the passage (〖Brahms〗_t=2) and, equivalently, neither an increase nor decrease in metric dissonance as it unfolds (∇〖Brahms〗_t=0).
+
+Example 4. Plotting of the sequence m_t=2 generated by the displacement canon between the outer voices in Brahms Op. 119, No. 1.
+
+Furthermore, summing the sequence permits the derivation of a new sequence that describes the canon’s ongoing accumulation of metric dissonance. As shown in Online Appendix 1, the summation of a constant sequence produces an arithmetic sequence. Here, ∑▒〖〖Brahms〗_t=〗 ∑▒2=2t.30 This means that for every sixteenth note duration over which the canon elapses (t), two sixteenth-notes worth of metric dissonance will accumulate (2t).
+
+Three sequences now describe three distinct metric features of the outer-voice canon: a model for the canon itself, a model for the (lack of) change in dissonance of the canon over time, and a model for the canon’s ongoing accumulation of dissonance. These specific sequences relate to specific arrows in the abstract model presented in Example 3. Given a sequence 〖{m〗_t} describing a metrically-dissonant passage, arrow a represents the construction of a sequence that returns the accumulated metric dissonance over a given span of time while arrow d represents changes in the passage’s dissonance over time. 
+
+Arrows b and c offer two additional interpretations of the original sequence 〖{m〗_t}. Since arrow b takes as its input a sequence of increasing and decreasing quantities of metric dissonance and returns 〖{m〗_t}, this means that the original sequence also represents a passage’s ongoing accumulation of changes in dissonance. While that observation may be of nebulous analytic value, arrow c is comparatively useful: because it takes as input a sequence describing a passage’s ongoing accumulation of metric dissonance and returns 〖{m〗_t}, the original sequence also represents a backward difference indicating the change over time of a passage’s ongoing dissonance accumulation, an interpretation allowing the analyst to compare the slopes of various summation curves to determine which of a set of passages is the most metrically-dissonant. 
+
+I noted that the displacement canon’s backward difference highlights something that is easily understood through intuition: until a composer breaks off a canon, it will proceed indefinitely. Examining the summation of the sequence reveals another property of canons: until a composer breaks off a canon, it will accumulate metric dissonance linearly with respect to time. Other kinds of displacement dissonances, such as syncopations, accumulate dissonance on a similar scale, and the same procedures may be employed to analyze other kinds of metric dissonances, providing a means of comparing any metric dissonance with any other.
+
+Now consider the hemiola in the Beethoven passage in Example 2. Here, the default meter’s downbeats are spaced three quarter notes apart, while the hemiola’s apparent 2/4 meter has downbeats every two quarter notes. At the barlines of mm. 21, 23, and 25, downbeats in both meters are aligned, but at the barlines of mm. 22 and 24, the downbeats in the actualized meter are offset by one quarter note from the downbeats in the default meter.31 As plotted in Example 5(a), if t represents single-measure 3/4 increments such that t=0 falls on the downbeat of m. 21 and 〖Beethoven〗_t measures the distance in quarter notes between the default and actualized meters, then at t=0,〖Beethoven〗_t=0; at t=1,〖Beethoven〗_t=1; and then the pattern repeats: at t=2,〖Beethoven〗_t=0, etc. The simplest formula describing this sequence is 〖Beethoven〗_t=t mod 2,32 and the formula for its backward difference, plotted in Example 5(b), would then be 〖∇Beethoven〗_t=t mod 2-(t-1)mod 2 (note that the backward difference is undefined at t=0).
+
+Both the sequence and its backward difference capture the periodic nature of the hemiola, which alternates between metric consonance when the downbeats align and metric dissonance when the downbeats diverge.33 The plotting of the backward difference captures my hearing of the hemiola: as it departs from the aligned downbeat at t=0 to arrive at the offset downbeat at t=1, the dissonance between the two meters increases at the rate of 1 quarter note per dotted-half note. As the hemiola prepares to realign at the downbeat at t=2, the dissonance between the two meters decreases at the rate of one quarter note per dotted half-note.
+As with the canon, finding the hemiola’s indefinite summation permits the study of its ongoing accumulation of dissonance. Example 6(a) presents one simple way to do so, which is to begin with a table that tallies accumulated dissonance at each t. The results are then plotted in Example 6(b) along with an approximation in the line Σm_t≈t/2+1/4.34 The approximation also reveals a property of hemiolas that may not be immediately obvious: like displacement canons, hemiolic dissonance accumulates on a linear scale.
+       a)
+
+	b)
+
+ 	
+Example 5. Plottings of the sequences describing (a) the hemiola in Beethoven’s Symphony No. 8, III (〖Beethoven〗_t=t mod 2) and (b) its backward difference (〖∇Beethoven〗_t=t mod 2-(t-1)mod 2). 
+	a)
+For: x=Σ〖Beethoven〗_tevaluated at t=x=00112132425363
+	b)
+
+Example 6. (a) Table of accumulated dissonance in the hemiola of Example 5 measured from
+t=0 to t=6. (b) Plotting of the summation table and its approximation, Σ〖Beethoven〗_t≈t/2+1/4.
+
+Example 7(a) transcribes another grouping dissonance in the introduction of the Phish instrumental “First Tube.” The song opens with a bass and drum groove in 2/4, then the guitar enters with a melody that lasts for eight measures of an actualized 9/16, each of which is one sixteenth note longer than the measures of the 2/4, such that the ninth downbeat of the guitar part converges with the tenth downbeat of the drum and bass groove, at which point the pattern repeats. Example 7(b) represents this relationship as proportional boxes. Given my preference to treat the longer timespans as representing the baseline, I measure the degree to which each downbeat in the bass and drums is offset from downbeats in the guitar. As each measure in the guitar passes, its downbeats occur one additional sixteenth-note after the preceding bass downbeat until the climax at the center of the passage, at which point the displacement decreases as the guitar’s downbeats begin to approach the following bass downbeat. This metric plan is coordinated with the guitar’s melody, which features an ascending motive that reaches its climax halfway through the cycle and then descends in melodic inversion for the second half.
+	a)
+
+	b)
+
+Example 7. (a) Phish, “First Tube,” drum and bass groove with guitar melody.  (b) Box representation of “First Tube.”
+	“First Tube” by Phish (c) Copyright 2000 by Who is She? Music, Inc.  Reproduced by Permission.
+
+This metric process—by which the guitar moves out of and back into phase with the bass and drums—can be described by the sequence 〖Phish〗_t=4-|(t mod 8)-4|, and its backward difference by the sequence 〖∇Phish〗_t=|((t-1) mod 8)-4|-|(t mod 8)-4|. Example 8(a) and 8(b) provide the respective plottings for these sequences: note their resemblance to the plottings describing the hemiola—they have the same shape, and only the amplitude and period have changed. 
+	a)
+
+	b)
+
+Example 8. Plottings of the sequences describing:
+        (a) the polymeter in Phish, “First Tube” (〖Phish〗_t=4-|(t mod 8)-4|) 
+        (b) its backward difference (〖∇Phish〗_t=|((t-1) mod 8)-4|-|(t mod 8)-4|)
+       
+The backward difference again returns intuitive results as it describes a steady increase in metric dissonance for four ticks, at which point the guitar is at its furthest remove from the bass, and then a steady decrease in metric dissonance for another four ticks as the guitar comes back into phase with the bass. As described in Online Appendix 3, grouping dissonances G(x+1)/x can be described with the same generalized formulae:
+G_t=x/2-|(t mod x)-x/2|
+〖∇G〗_t=|((t-1) mod x)-x/2|-|(t mod x)-x/2|35
+Following the process used to determine the summation sequence for the Beethoven hemiola, Example 9(a) presents a table describing the accumulated dissonance over the course of the “First Tube” passage, and Example 9(b) plots the results and their linear approximation in the line 〖ΣPhish〗_t≈2t+1.36
+	a)
+For: x=Σ〖Phish〗_tevaluated at t=x=001123364105136157168169171019
+b)
+
+Example 9. (a) Table of accumulated dissonance in the polymeter of Phish, “First Tube,” measured from t=0 to t=10; and (b) plotting of the summation table (extended for visual clarity to t=25) and its approximation in the line 〖ΣPhish〗_t≈2t+1.
+
+I have now constructed families of sequences describing three metrically-dissonant passages, and the sequences offer a means of understanding the metric dissonances they describe as processes. Crucially, though, I have also now converted the events into formulae that can be compared, providing a means of answering questions like: which passage accumulates the most dissonance? Answering this question is a matter of comparing the summation sequences for each passage; however, it is critical to first determine a common reference point among them, because at present, units in the domains and ranges represent different durations. A convenient reference point is the clock-time duration of one second, and Example 10 presents a comparison of the three sequences where the units in both the domain and range are scaled to that timespan (See Online Appendix 2 for the scaling procedures). Visually, it is clear that the canon in Op. 119, No. 1 is, in general, a more metrically-dissonant process than either the hemiola in Beethoven’s Symphony No. 8 or the polymeter in the riff of Phish’s “First Tube,” but do these results make intuitive sense? 
+
+
+
+Example 10. Overlaid plottings of summation sequences (after scaling all domains and ranges to the second) for the Beethoven hemiola, the Brahms canon, and the Phish polymeter.
+
+Consider first the comparison of the two grouping dissonances. The plottings confirm Krebs’s prediction concerning strong and weak dissonances that “the more pulses elapse before attacks of the constituent layers coincide, the more intense the dissonance.”37 Yet they also reveal an additional nuance: that the Phish polymeter begins as a less dissonant process than the Beethoven hemiola and only overtakes it after some pulses elapse. Why should this be? Note that when scaled, both examples have the same amount of peak dissonance. Since the Beethoven passage arrives at its peak faster than the Phish example, the former takes an early lead. However, since the wavelength of the Phish period is quite a bit longer than the wavelength of the Beethoven period, it accumulates dissonance for a longer period of time before the cycles realign with their momentary accumulation of 0. Even though the Beethoven plotting took an early lead, the greater duration of dissonance accumulation in the Phish passage causes its curve to overtake the former’s and will continue to do so indefinitely. 
+
+By contrast, dissonance accumulates significantly faster in the Brahms canon than in either of the grouping dissonances. There are two intuitive reasons for this: first, it took both grouping dissonances some time to achieve their peak dissonance whereas the canon does so almost immediately; and second, as a stable dissonance, the canon will never return a 0 value, so the summation curve will never “slow down” as do those of the two grouping dissonances. Krebs has noted that “there is no reason to assume that grouping dissonances are inherently more dissonant than displacement dissonances, or vice versa,”38 and although the displacement dissonance considered here is more dissonant than the grouping dissonances presented thus far, I will consider an example below in which the opposite is true.
+       
+TWO ANALYTIC EXTENSIONS
+
+Discrete calculus permits the modeling and exploration of more complicated processes than simple grouping and displacement dissonances. This section focuses on two: the metric relationship between voices in a mensuration canon and the metric effects created by layering together more than two dissonant pulse streams.
+
+Example 11 reproduces excerpts from Conlon Nancarrow’s Canon B from Two Canons for Ursula, in which the right hand engages in a strict canon with the left hand, entering after one-third of the left hand’s part has elapsed and in diminution by a factor of 2/3, allowing the canon to end just as both parts converge on the downbeat of m. 400.39
+This process does not fit comfortably within either category of grouping or displacement dissonance. On the one hand, the right hand’s gestures are displaced from those in the left hand, but the degree of displacement changes constantly over the course of the canon, whereas for Krebs, displacement dissonances arise from a “different positioning of congruent layers.”40 Put another way, the Krebs label Dx+a requires that a be a constant. On the 
+
+Example 11. Excerpts from “Canon B (2/3)” from  Two Canons for Ursula by Conlon Nancarrow 
+© Copyright 1992 by Hendon Music, Inc. Reprinted by Permission, 2018.
+
+other hand, Krebs conceives of grouping dissonances as featuring periodic cycles of aligned and non-aligned attacks,41 and while the presence of two time signatures and the notation of the dotted barlines in mm. 134–35 make clear a hemiolic relationship between the two meters, the canon’s central focus on gesture places less rhetorical weight on the periodic alignment and nonalignment of downbeats (indeed, the composer’s choices of time signatures and tempo indication imply that downbeats are aligned throughout) and more rhetorical weight on the singular alignment that occurs when the two voices converge on the downbeat of m. 400. The effect of this canon, similar to those discussed in Callender (2001), is governed by the steady decrease in echo distance between the appearance of salient gestures in the left hand and their recurrences in the right hand.
+
+To construct a sequence clarifying the nature of the displacement in Canon B, I posit that displacement cannot be measured until the right hand’s entrance, and so let t=0 refer to the downbeat of m. 134 and 〖Nancarrow〗_t return the number of measures that have elapsed since the associated downbeat in the left hand. For example, as annotated on Example 11, at t=0 (the downbeat of m. 134), m_t=133 measures; at t=1 (the downbeat of m. 135), m_t=132 1/2 measures; at t=265 (the downbeat of m. 399), 〖Nancarrow〗_t=1/2 of a measure; and finally, at t=266 (the downbeat of m. 400), 〖Nancarrow〗_t=0. Example 12(a) plots the formula describing this sequence: 〖Nancarrow〗_t=-1/2 t+133. This is an arithmetic sequence that is fundamentally different from the sequences describing the canon, hemiola, and polymeter. To wit: in contrast to the relatively steady (if nonetheless periodic) plottings of the former examples, Example 12(a) makes it visually clear that as the canon unfolds, displacement steadily decreases over time, a fact confirmed by calculating the backward difference, plotted in Example 12(b):
+∇〖Nancarrow〗_t=〖Nancarrow〗_t-〖Nancarrow〗_(t-l)
+=(-1/2 t+133)-(-1/2 (t-1)+133)  
+=-1/2 t+133-(-1/2 t-1/2+133)
+=-1/2
+In Canon B, displacement decreases at a constant rate of 1/2 measure per downbeat, a result that contrasts with the results of the grouping and displacement dissonances, which were periodic and 0, respectively. The canon’s summation reveals even more striking properties.
+	a)
+
+	b)
+
+Example 12. Plottings of the sequences describing (a) offsets in Nancarrow, “Canon B”:
+〖Nancarrow〗_t=-1/2 t+133; and (b) its backward difference: 〖Nancarrow〗_t=-1/2. Because of the scale involved, in all plottings related to “Canon B,” what appear to be continuous curves are taken to be collections of discrete points.
+
+Example 13(a) tabulates the canon’s accumulated displacement over its first few measures; the resulting numbers are of a vastly different scale than those returned in the grouping and displacement dissonances. The sequence describing the canon’s accumulated dissonance, plotted in Example 13(b), is given by Σ〖Nancarrow〗_t=-t^2/4+531t/4+133. The plotting is parabolic, featuring significant growth at the beginning that trails off toward the end. Several observations about the work’s structure help clarify how each term of the formula contributes to the canon’s dissonant effects. First, the left hand plays monophonically for a considerable span of time; this lengthy solo performance significantly marks the right hand’s entrance for consciousness.42 Furthermore, the right-hand gestures are initially so far removed from the associated left-hand gestures that the canon is practically imperceptible. It is not until the later part of the movement that gestures in both hands are temporally close enough to be perceived as canonic, and as the closing measures unfold, the voices move closer together until they reach the final octave Cs simultaneously. 
+	a)
+For: x=Σ〖Nancarrow〗_tevaluated at t=x=01331265 1/22397 1/2352946605790 1/26920 1/2710508117991307 1/2101435 1/2
+
+
+	b)
+
+Example 13. (a) Table of accumulated dissonance in the diminution canon of Nancarrow, “Canon B,” measured from t=0 to t=10; and (b) plotting of its summation sequence: Σ〖Nancarrow〗_t=-t^2/4+531t/4+133.
+
+Each term of the equation Σ〖Nancarrow〗_t=-t^2/4+531t/4+133 plays a role in establishing this narrative. The constant term reflects the right hand’s surprising entrance after 133 solo measures. Then, for smaller values of t, the linear term 531t/4 contributes a large amount of accumulated dissonance while the quadratic term -t^2/4 negates a comparatively small amount of that dissonance. The result is the steep slope toward the left of Example 13b,43 indicating that large amounts of dissonance accumulate during the early stages of the polyphony and corresponding to the fact that the time interval between the entries of the hands is too great for the canon to be perceptible (at such moments, conceiving metric dissonance as “rhythmic noise” is useful). At larger values of t, the negative values in the quadratic term begin to balance the positive values in the linear term, causing dissonance accumulation to level out as the parabola approaches its vertex (where there is zero growth) on the downbeat of m. 400. At this late stage of the canon, associated gestures in the two voices have finally moved close enough together so that the canon and its closing convergence are perceptible.
+
+The plottings of the grouping and displacement dissonances are periodic and constant, respectively. The fact that constant functions represent a subset of periodic functions helps to explain the qualitative similarity between grouping and displacement dissonances, permitting the approximation of the summations of the two grouping dissonances through linear functions. Analyzing Canon B using the same methodology reveals that, in contrast to a possible first impression that its diminution canon represents a blending of displacement and grouping, the relationship between its pulse streams is of a fundamentally different quality, and the canon itself accumulates dissonance on a vastly greater scale than the other examples.
+
+Finally, Example 14(a) reproduces a well-known passage from the first movement of Elliott Carter’s String Quartet No. 1 that embeds three simultaneous hemiolas: there are 2:3 relationships between the first and second violins, the second violin and viola, and the viola and cello. As with the Phish example, Example 14(b) represents these relationships with proportional boxes (thick lines indicate points where hemiolas converge) and, following the already-established procedures, Example 15 presents formulas, scaled to a common rhythmic unit, for each hemiolic layer. 
+	a)
+
+
+
+       b)
+
+Example 14. (a) String Quartet No. 1 by Elliott Carter Copyright (c) 1956 (Renewed) by Associated Music Publishers, Inc. (BMI) International Copyright Secured. All Rights Reserved. Reprinted by Permission
+• mm. 201–204 ; and
+(b) its box representation.
+
+       a)
+
+       b)
+
+	c)
+
+Example 15. Box diagrams and plottings for each of the three hemiolic layers in Elliott Carter, String Quartet No. 1, mm. 201–204.
+(a) Violin I/Violin II hemiola: 	{〖SmallHem〗_t= 4-|t mod 8-4|│t=12p, p∈N}
+(b) Violin II/Viola hemiola:	{〖MedHem〗_t= 6-|t mod 12-6|  │t=18p, p∈N}
+(c) Viola/Cello hemiola:		{〖LargeHem〗_t=9-|t mod 18-9|│t=27p, p∈N}
+Although the functions presented only define the points of the triangle curve (and not the connective lines between them), it can be conceptually useful to understand those lines as a representation of the perceived increases and decreases of dissonance between the articulation points. This conception will be particularly useful when combining these functions, as explained in Footnote 44.
+
+       
+The largest common subdivision of all of the durations is the triplet-thirty-second note; the four instruments’ durational proportions of 8:12:18:27 reflect multiples of this small rhythmic value, so the sequences describing the hemiolas are scaled according to these proportions. For instance, during the hemiola between Violin I and Violin II, 〖{SmallHem〗_t}, the first three notes of Violin II occur at t=0, 12, and 24 (where each t represents a triplet-thirty-second note), and at these moments the nearest attacks in Violin I are 0, 4, and 0 triplet-thirty-second notes away. The remaining hemiolas, those between Violin II and the Viola, 〖{MedHem〗_t}, and the Viola and the Cello, 〖{LargeHem〗_t}, may be analyzed similarly using the following formulas:
+{〖SmallHem〗_t= 8-|t mod 16-8|  │t=12p, p∈N}
+{〖MedHem〗_t= 6-|t mod 12-6|  │t=18p, p∈N}
+{〖LargeHem〗_t= 9-|t mod 18-9|  │t=27p, p∈N}
+There remain three voice-pairs to consider for a complete analysis of the passage. Violin I/Viola and Violin II/Cello are relatively straightforward and result in triangle curves that are similar to the previous voice-pairs:
+{〖Violin I/Viola 〗_t=4-|t mod 8-4|  │t=18p, p∈N}
+{〖Violin II/Cello 〗_t=6-|t mod 12-6|│t=27p, p∈N}
+Example 16 plots the final voice pair, Violin I/Cello, which is more complex. The sequence representing the absolute distance (in triplet-thirty-second notes) from each attack in the cello to the nearest attack in the first violin is 0, 3, 2, 1, 4, 1, 2, 3, 0, and it may be modeled by:
+{〖Violin I/Cello〗_t=4-|t mod 8-4|│t=27p, p∈N}
+The model for the passage as a whole averages the contributions of each curve at each triplet thirty-second note, and Examples 17(a) and 17(b) plot the resulting curve, {〖CompHem〗_t}, and its backward difference.44 The curves are 
+
+Example 16. Box diagram and plotting of {〖Violin I/Cello 〗_t=4-|t mod 8-4|│t=27p, p∈N}
+
+complex, featuring wild changes between increasing and decreasing amounts of metric dissonance as its various subcycles undergo the processes of divergence and realignment. Although it is probably optimistic to expect a listener to perceive the precise changes in dissonance at each point predicted here, the curves nonetheless do capture the effect of this passage, at least to my ears: it sounds like the pulse speeds up and slows down unpredictably in a kind of metric tug-of-war.
+	a)
+
+
+
+       b)
+
+Example 17. Plottings for (a) 〖{CompHem〗_t} and (b) {∇CompHem_t}.
+
+Example 18 follows a similar procedure to that used in Example 9 to plot and approximate by a line the summation sequence 〖{ΣCompHem〗_t}, but with a few complications stemming from the fact that, unlike in the Phish polymeter, the tick spans are non-uniform here, instead consisting of multiples of 8, 12, 18, and 27. To solve the problem, I calculate what are known as Riemann sums by dividing the curve into a set of vertical strips that span each tick of the domain; then, the area of each strip represents the accumulated dissonance over each span. Riemann sums are often used to approximate the area under smooth curves, where more precise results are obtained as the width of the vertical strip approaches zero. Here, as shown in Example 18(a), these strips can be decomposed into rectangles and triangles, allowing these areas to be calculated exactly. Example 18(b) provides the area for each strip and a running total of the sum after n ticks of Example 18(a); the results and an approximation are plotted in Example 18(c). 
+Once again scaling these results to the duration of the second, using the same procedures as those outlined in Online Appendix 2, Example 19 compares the scaled approximation, Σ〖CompHem〗_t≈  16070t/5832, to the scaled plotting of the Brahms canon, which the model had determined to be more dissonant than either the Phish polymeter or the Beethoven hemiola. The model formalizes both what seems to be intuitively correct and confirms Krebs’s third criterion, that “inherent intensity is also determined…by the number of pairs of noncongruent layers that it contains”45: the Carter example is the most dissonant of the four.
+	a)
+
+	b)
+For: x=〖CompHem〗_t at t=Area of preceding span Accumulated Riemann sum000864/964/91280/91616104/9248/91858/9342420542721/2129/2
+
+
+	c)
+
+Example 18. (a) Decomposition of the area beneath the span from t=0 through t=27 into rectangles and triangles. (a) Table of accumulated dissonance in Carter’s String Quartet No. 1, mm. 201–204 (abridged). (c) Plotting of the complete summation table and its approximation in the line 〖ΣCompHem〗_t≈16070t/5832.
+
+Example 19. Comparison of the plottings, scaled to seconds, of the Brahms canon 〖(Σm〗_t=t/2) and the approximation of the Carter hyperhemiola (Σ〖CompHem〗_t≈ 16070t/5832).
+
+CONCLUSIONS
+
+This article has laid the groundwork for a new way of modeling metric dissonance, but there is considerable ground left to explore. Theorists might wonder how the inner-voice D6+1 of Example 1 and the sidestepped D3+2 in the Beethoven passage affect the accumulation of dissonance; or how this model, which has focused solely on procedurally-created dissonances, could be adapted to describe other kinds of metric phenomena such as changing or irregular meters. Can the model successfully account for passages wherein a composer purposefully thwarts an expected metric resolution? To what extent does the presence or absence of a clear hypermetric structure interact with the periodic convergence of a grouping dissonance? What happens if a hypermetric structure conflicts with a grouping dissonance’s periodic convergence? How can the generally smaller-scale insights elucidated by the present model be mobilized in studies of form and other larger-scale processes?
+
+Nonetheless, some new general conclusions about metric dissonance may be drawn from the analyses in this study. First, understanding metric dissonance to be a quantifiable entity that may be expressed by a non-negative rational number means that metrically-dissonant passages will accumulate some positive amount of dissonance, whereas metrically-consonant passages (or even metrically-consonant moments within a metrically-dissonant passage) will accumulate no metric dissonance. This further means that the sequence m_t=0 describes a metrically-consonant passage, providing a symbolically-useful answer to the question posed in the introduction: is there a way of formalizing metric consonance that is both intuitively related to all forms of metric dissonance while at the same time capturing the fundamental similarity among all forms of metric consonance? 
+
+Second, quantifying metric dissonance across a number of musical passages creates a heuristic for comparing and ranking different kinds of dissonances. Here, the Beethoven hemiola is the least dissonant passage, followed by the Phish polymeter, the Brahms canon, and the Carter hyperhemiolas. The Nancarrow canon accumulates dissonance on a much larger and qualitatively different scale than any of the other works studied here.
+
+Third, the model suggests a taxonomy of different kinds of dissonance in a two-dimensional space: dissonances can be stable or unstable and converging or non-converging. A stable dissonance will maintain the same behavior indefinitely; for instance, a strict canon will maintain a constant degree of displacement until the composer ends it. By contrast, Nancarrow’s Canon B will only decrease in dissonance until the downbeat of m. 400; were it to continue (as occurs, incidentally, in Canon A), the right hand would overtake the left hand and dissonance would begin to increase again. Thus, the canon required that the composer end the canon at m. 400 to avoid this unwanted change in behavior.
+
+A dissonance converges if at some timepoint t > 0, m_t=0; otherwise the dissonance is non-converging. The Brahms canon is thus non-converging, whereas the other four examples converge. A variation of Canon B, in which both voices in a mensuration canon simultaneously begin rather than end with each other would also be non-converging. The table in Example 20 categorizes the five examples from this study according to this methodology.
+
+ConvergingNon-ConvergingStableBeethoven hemiola
+Phish polymeter
+Carter hyperhemiolasBrahms canonUnstableNancarrow canon
+
+Example 20. Taxonomy of metric dissonance.
+
+Finally, the backward difference of a sequence describing a metric dissonance suggests a phenomenological model of a listening experience. The first four examples represent predictable changes in dissonance—changes that are both perceptible and intuitive to my ears when listening to the pieces in question. In the Brahms Intermezzo, I hear a steady canon between the outer and inner voices; in Beethoven’s hemiola, I feel the alternation between aligned and unaligned attacks and the concomitant alternation between increasing and decreasing dissonance. Similarly, in the Phish example, the metric relationship between the guitar and bass becomes more and more disorienting as the attacks in the different voices move out of phase so that its slow return to normalcy feels like a metric resolution (and again, the backward difference plot represents a concomitantly steady increase followed by a steady decrease in dissonance). Lastly, in the early part of the Nancarrow example, while dissonance is measured in large values, it is difficult to perceive the canon—borrowing London’s terms, there is too much rhythmic noise—but toward the end of the piece, as the dissonance values approach zero, the canon becomes significantly more audible. Thus, the negative backward difference represents the very deliberate process by which the two voices move closer and closer to simultaneity and the canon becomes more and more perceptible until the parts finally align in the last measure. 
+
+Contrasting with these steady, predictable changes in dissonance, the effect of the Carter excerpt, at least to my ears, is of a metric push-and-pull, an unpredictable speeding up and slowing down until it finally reaches its convergence on the downbeat of m. 204. This push-and-pull is captured nicely by the plotting of the backward difference with its wild alternations and shifts between increases and decreases in metric dissonance. The narratives of listening experiences predicted by the present model of metric dissonance, as well as a study on the limits of dissonance perception—when exactly would a perceptible metric dissonance devolve into rhythmic noise?—would be ripe for exploration in the music cognition laboratory.
+       
+APPENDIX 1: SEQUENCES AND TIME FUNCTIONS
+
+A mathematical sequence is an ordered collection of terms; formally, a sequence is a function whose domain is a subset of the integers; the sequence maps from an integer describing an entry’s ordinal place (the index, the first of which is customarily 0) to the entry itself.46 Example 21 provides six sample sequences: the first two are infinite arithmetic sequences, which map the index to the entry by scaling the former and adding a constant (in the case of {a_n }, the index is scaled by 1, to which 0 is added).47 {c_n } is an infinite quadratic sequence because it includes a term in which the index is squared. {d_n } is an infinite geometric sequence that raises a constant to a power dependent upon the index. {e_n } is the well-known Fibonacci sequence, and {f_n } is an arbitrary finite sequence. The first four sequences have straightforward closed formulae: a_n=n; b_n=3n+1; c_n=3n^2-3n+1; and d_n=2^(n+1).48 Although {e_n} can be described with a closed formula,49 it is perhaps better known through its initial conditions e_0=0, e_1=1 and its recurrence relation e_n=e_(n-2)+e_(n-1), which states that all entries except for the first two consist of the sum of the two preceding entries. Since the entries of {f_n } were arbitrarily chosen, no intuitive closed formula or recurrence relation describes it.
+{a_n }=0, 1, 2, 3, 4, … a_n=n {b_n }=1, 4, 7, 10, 13, … b_n=3n+1 {c_n }=1,1, 7, 19, 37 …c_n=〖3n〗^2-3n+1{d_n }=2, 4, 8, 16, 32, … d_n=2^(n+1) {e_n }=0, 1, 1, 2, 3, 5, 8,…e_n={■(0&for n=0@1&for n=1@e_(n-2)+e_(n-1)&for n≥2)┤ {f_n }=5, 9, 200, 8, 77 	(no formula)
+Example 21. Six sequences.
+
+Given a sequence, we may wish to understand how each term relates to the next. For example, if each term of a sequence describes monthly household expenditures, a prudent personal financier would want to know whether these expenditures are increasing, decreasing, or staying the same. One way to do this is to construct a new sequence, called the backward difference, formally defined as ∇a_n=a_n-a_(n-1),50 in which each entry indicates the change between successive terms of the original sequence. Example 22 demonstrates the construction of the backward difference for two of the original sequences. Note that neither ∇a_0 nor ∇c_0 are defined; therefore the backward differences “lose a term”; the index for the first terms of {∇a_n} and {∇c_n} will be 1. Example 23 uses the formal definition to calculate the backward differences for each of the sequences in Example 21. {〖∇e〗_n } has the interesting property that it represents a single-term rightward shift of 〖{e〗_n}, while remarkably, {∇d_n }={d_n }.51
+{∇a_n }
+
+{a_n }=    +1,     +1,    +1,     +1, …
+
+=0,        1,        2,        3,       4, … {∇c_n }
+ 
+{c_n }=  +0,    +6,  +12,   +18, … 
+
+=1,        1,         7,         19,         37, … 
+Example 22. The sequence of backward differences describes the change between terms of the original sequence.  
+	∇a_n=n-(n-1)	=1{∇a_n }=1, 1, 1, 1, …
+	∇b_n=(3n+1)-[3(n-1)+1]	=3{∇b_n }=3, 3, 3, 3, …
+	∇c_n=(〖3n〗^2-3n+1)-[3(n-1)^2-3(n-1)+1]
+		=6n-6{∇c_n }=0,6,12,18,…
+
+	∇d_n=2^(n+1)-2^n	=2^n{∇d_n }=2, 4, 8, 16, 32,…
+	∇e_n	={■(1&for n=1@e_(n-2)&for n≥2)┤          {∇e_n }=1, 0, 1, 1, 2, 3, 5, 8, …
+
+	∇f_n	=f_n-f_(n-1){∇f_n }=4, 191, -192, 69
+Example 23. The backward differences of the sequences in Example 21, where ∇a_n=a_n-a_(n-1).52
+Given a sequence, we might also wish to calculate the sum of a certain number of its terms. For instance, the head of the household might wish to know the total expenditures over a certain number of months. We could tabulate this manually, but such a procedure would become rather cumbersome as the number of terms increases. When possible, a better solution is to find a new sequence, Σa_n, whose n-th entry represents the sum of the first n terms of the original sequence; we call this new sequence the indefinite summation. For example, the sum of the first term of {a_n } is 0, the sum of the first two terms is 1, the sum of the first three terms is 3, and so on; the first five terms of the sequence {〖Σa〗_n } are 0, 1, 3, 6, 10. Moreover, we can find a closed formula to describe this sequence: the nth term of {Σa_n } is given by (n^2+n)/2. Example 24 provides the first few terms of the summations of the sequences in Example 21 and provides formulae where possible. Summation formulae are also known as antidifferences because the summation and difference operations are near inverses of each other.53 They are not exact inverses because, first, as we have already discovered, the backward difference operation always loses a term, and second, the antidifference actually represents an infinite class of solutions, and finding the correct one involves determining and adding a constant of summation.
+
+
+
+
+{Σa_n }= 0, 1, 3, 6, 10…Σa_n=(n^2+n)/2{Σb_n }=1, 5, 12, 22, 36…Σb_n=(3n^2+5n+2)/2{Σc_n }=1, 2, 9, 28, 65…Σc_n= n^3+1{Σd_n }=2, 6, 14, 30, 62…Σd_n=2^(n+2)-2{Σe_n }=0, 1, 2, 4, 7, 12, 20…〖Σe_n=e〗_(n+2)-1{Σf_n }=5, 14, 214, 222, 229(no formula)
+Example 24. Sequences representing the indefinite summations of the sequences in Example 21, plus generating formulae where possible.
+
+To clarify: consider summing the backward differences in Example 23. Were these operations exact inverses, then taking the summation of each of these sequences ought to return the original sequences of Example 21. This does not quite happen. Example 25 tabulates the summations after n terms of each of the backward differences of Example 23, then extrapolates a new sequence, {x_n }, from the results. The last column replicates the original sequence to simplify comparison. In every case, although {x_n } differs from {y_n }, there exists a straightforward mapping that will transform {y_n } into {x_n }: formally, {x_n }={y_(n+1)}-y_0, where y_0 represents the constant of summation. Informally, as shown in Example 26, to derive x_n, we first shift y_n one term to the left, then subtract from each term the value of the first term of y_n. This is an intuitive result: since calculating the backward difference of each sequence dropped the first term, restoring the original sequence also requires restoring that first term. In short, we can always use a backward difference to undo a summation since the former operation will remove any constant added by the latter one: thus, taking the backward differences of the summation formulae provided in Example 24 returns the original sequences, as shown in Example 27. But by contrast, we can only use summations to undo backward differences if we have kept track of all dropped terms.
+For:{x_n }={Σ∇y_n}evaluated at n=x_n={x_n }{y_n }〖{y〗_n}=〖{a〗_n}112233441, 2, 3, 4,…0, 1, 2, 3, 4…〖{y〗_n}={b_n }1326394123, 6, 9, 12,…1, 4, 7, 10, 13…{y_n }={c_n }10263184360,6,18,36,…1,1, 7, 19, 37 …{y_n }={d_n }12263144302, 6, 14, 30…2, 4, 8, 16, 32…{y_n }={e_n }11213243551, 1, 2, 3, 5…0, 1, 1, 2, 3, 5…{y_n }={f_n }142195334724, 195, 3, 725, 9, 200, 8, 77
+Example 25. Summations of the given terms of the backward differences in Example 22 and comparisons to the original sequences in Example 21
+
+
+{y_n }{y_(n+1) }
+(shifts left)y_0{y_(n+1) }-y_0={x_n }0, 1, 2, 3, 4…1, 2, 3, 4, …01, 2, 3, 4…1, 4, 7, 10, 13…4, 7, 10, 13…13, 6, 9, 12…1,1, 7, 19, 37,…1, 7, 19, 37,…10,6,18,36…2, 4, 8, 16, 32…4, 8, 16, 32…22, 6, 14, 30…0, 1, 1, 2, 3, 5…1, 1, 2, 3, 5…01, 1, 2, 3, 5…5, 9, 200, 8, 779, 200, 8, 77…54, 195, 3, 72Example 26. Mappings to restore original sequences after applying the backward difference operation followed by summation.
+Σa_n=(n^2+n)/2∇Σa_n=(n^2+n)/2-(〖(n-1)〗^2+(n-1))/2	  =(n^2+n)/2-(〖(n〗^2-2n+1)+(n-1))/2	=2n/2=n	=a_nΣb_n=(3n^2+5n+2)/2∇Σb_n=(3n^2+5n+2)/2-(3〖(n-1)〗^2+5(n-1)+2)/2	=(3n^2+5n+2)/2-(3〖(n〗^2-2n+1)+5n-3)/2	=(6n+2)/2=3n+1	=b_nΣc_n=n^3+1∇Σc_n=(n^3+1)-[(n-1)^3+1]
+	= n^3+1-(n^3-3n^2+3n-1+1)
+	=〖3n〗^2-3n+1
+	=c_nΣd_n=2^(n+2)-2∇Σd_n=2^(n+2)-2-(2^((n-1)+2)-2)
+	=2^(n+2)-2^(n+1)
+	〖=2〗^(n+1) 
+	=d_nΣe_n 〖=e〗_(n+2)-1∇Σe_n 〖=e〗_(n+2)-1-(e_(n+1)-1)
+	〖=e〗_(n+2)-e_(n+1)
+	=e_n
+Example 27. The backward differences of the formulae in Example 24 return the formulae describing the sequences in Example 21.54
+
+Within the body of the article, I omit the constant of summation for simplicity, for which there are two justifications. First, I assume that a given metrically-dissonant passage begins with no accumulated metric dissonance, meaning the constant that we add would be 0 anyway. Second, measuring accumulated metric dissonance over spans of time requires subtracting the constant added for the initial time point from the constant added for the final time point, also netting 0.
+       
+APPENDIX 2: SCALING SEQUENCES FOR COMPARISON (EXAMPLES 10 AND 19)
+
+Naturally, the first step in scaling the sequences to a common temporal unit is determining tempi for each piece in question. Brahms’s indication of Adagio is inexact, as is the extensive rubato used in common performance practice; 60 eighth-notes per minute seems like a reasonable tempo and makes the conversion simpler, and a quick glance at Example 10 makes it immediately clear that a variance of 5–10 beats per minute in either direction will have no impact on the comparative growths among the three examples. By good fortune, the performance of “First Tube” on Phish’s album Farmhouse (Elektra Records, 2000) clocks in at exactly 126 beats per minute, which happens to be the same tempo indicated by Beethoven for the Menuet.
+
+Since the units for both the domain and range of the summation graph for the Brahms piece used the sixteenth note, it may be scaled to the second by recognizing that 60 (eighth notes)/min*2 (sixteenth notes)/(eighth note)*(1 minute)/(60 seconds)=2  (sixteenth notes)/second, and the reciprocal of the latter figure indicates that there is 1/2   second/(sixteenth note). Each value in the domain and range of ∑▒〖m_t=〗 2t (assuming an index of 1) is then multiplied by 1/2 .
+
+Similar calculations reveal that the domain of the Beethoven hemiola, which had been measured in bars rather than beats, needs each index to be scaled by 1.43, which is the number of seconds per measure in a 3/4 meter at 126 beats per minute; and the scale of the range, which had been measured in quarter notes, needs to be scaled to .48 seconds, since 126 quarter notes per minute equals .48 seconds per quarter note. By the same token, the range in the Phish example is scaled by .12 seconds per sixteenth note and the domain is scaled by .95 seconds per 2/4 measure, and then again by (17/16) to account for the fact that the plotting assumes the guitar part to provide the baseline meter.
+
+APPENDIX 3: THE MODULO FUNCTION AND GROUPING DISSONANCES
+
+The general format of the various formulae used to describe the grouping dissonances hinges on the use of the modulo function and absolute values. The reader may be curious why and whether these formulae reflect processes inherent to the music, and they do. Among other things, the modulo function returns the remainder when two integers are divided. For example, the reader may verify that:
+108/8=13 with remainder 4
+and also that:
+108 mod 8=4
+This fact is useful because the offsets that arise during a grouping dissonance are exactly the remainders that occur when dividing the cardinality of one stratum by the other. Consider Examples 7b and 8a. Owing to the fact that the offsets occur in multiples of the sixteenth note, the following table presents the results of dividing the number of sixteenth notes that constitute a group in the longer unit by the number of sixteenth notes that constitute a group in the shorter unit. 
+At t=Elapsed pulses in guitarGuitar pulses modulo bass/drum cardinality:result199 mod 8121818 mod 8232727 mod 8343636 mod 8454545 mod 8565454 mod 8676363 mod 8787272 mod 80
+
+There are two main takeaways from this table. First, the fact that the multiples of 9 mod 8 are equivalent to the integers defining the timepoints mod 8 means there are two equivalent ways of defining the resulting curve:
+〖Phish〗_t=4-|(t mod 8)-4|
+and
+〖Phish〗_t=4-|(9t mod 8)-4|
+There is also a third way to model the curve: one that maps not from a set of indexed timepoints (t = 1, 2, 3, etc.), but from the actual number of pulses that have elapsed in the guitar. This model is somewhat less elegant than the previous two because it requires restricting the domain only to multiples of 9 (in fact, it does exactly the same thing as the second formula, except that the multiplication of 9 happens in the construction of the domain, rather than as part of the function). This formula looks like this:
+ {〖Phish〗_t=4-|(t mod 8)-4|  │t=9p, p∈N}55
+In cases where it is possible to conceptualize a grouping dissonance in terms of timepoints rather than actual elapsed pulses, the simpler equations suffice. However, there are occasions, particularly when comparing two or more metric structures as in the Carter passage, when it is important to be able to model the dissonance on the basis of elapsed pulses.
+
+The second takeaway from the table is that while all is well for the first four iterations, the modulo function fails to return the desired results at t=5, 6, and 7. This happens because I have defined the quantity of metric dissonance at a given point in a grouping dissonance as being the nearest attack in an actualized meter to an attack in a default meter. At t=5 and beyond, the nearest attack in the actualized meter comes before the attack in the default meter and the modulo function is still measuring the next attack in the actualized meter after the attack in the default meter. The modulo function alone returns the least positive remainder, but what is needed is a function that will return the least absolute remainder. That is, even though in the case of t=5,  45/8 does equal 5 with a remainder of 5, it also equals 6 with a remainder of -3. The latter is the desired figure that the formula should return, and, since I have defined quantities of dissonance as always being positive, the formula should return the absolute value of that figure. The absolute value of the least absolute remainder will always be less than half of the divisor; moreover, if the modulo function returns a remainder that is not the least absolute remainder, it may still be found by subtracting the divisor from the least positive remainder. What is needed is a function that returns a remainder and does nothing else if the remainder is less than or equal to half the value of the divisor, but subtracts the divisor from the resulting remainder if the remainder is greater than half the value of the divisor. The generalized formula for grouping dissonances of the form G(x+1)/x, m_t=x/2-|(t mod x)-x/2|, does precisely this. To show how this works, consider the function describing the Phish sequence at t=3 and t=5, respectively:
+
+
+〖Phish〗_3=4-|(3 mod 8)-4|
+〖Phish〗_3=4-|3-4|
+〖Phish〗_3=4-|-1|
+〖Phish〗_3=4-1
+〖Phish〗_3=3
+
+〖Phish〗_5=4-|(5 mod 8)-4|
+〖Phish〗_5=4-|5-4|
+〖Phish〗_5=4-|1|
+〖Phish〗_5=4-1
+〖Phish〗_5=3
+
+
+In essence, what is happening is that in the case where t is less than half the divisor, the 4s inside and outside the absolute value sign cancel, essentially adding 0 to the resulting modulo value, and in the other case, the 4s combine, ultimately subtracting 8 from the resulting modulo value.
+
+While the Carter example did not include many grouping dissonances of the form G(x+1)/x, each formula nonetheless returns the ongoing metric offsets generated between each pair of voices by finding the least absolute remainder when dividing the number of pulses in the longer stratum by those in the shorter stratum. The general formula for each is: 
+{m_t= a/2-|t mod a-a/2|  │t=bp, p∈N},
+where a represents the pulse length of the shorter durations and b represents the pulse length of the longer ones.
+***
+
+Finding closed formulae that define the summation sequences for grouping dissonances is more complex than finding the same for displacement dissonances. Referring to Example 6b, the summation sequence for the Beethoven hemiola is best found by noting that the behavior of the curve is governed by the composite activity of two separate phenomena; in other words 〖ΣBeethoven〗_t= f_t+g_t  : first, there is periodic activity with a wavelength of 2 (since the basic curve was characterized by the same periodicity, this is expected). Second, rather than there being an exact repetition of the periodic activity, each iteration occurs 1 point higher in the range. This increase represents an arithmetic phenomenon, where the sequence grows by a fixed amount, 1, over equal spans of time in the domain, 2 (this is why the summation may be productively approximated by a line); hence the arithmetic component is defined by the sequence f_t=  t/2. Now, knowing both the results of the summation sequence and its linear component, the periodic component can be determined through simple algebra: 〖ΣBeethoven〗_t-f_t= g_t. Subtracting out the linear component from the summation sequence returns the periodic sequence: {g_t }=0,  1/2,0, 1/2,0… . Note that at all moments {g_t } returns half the value produced by the original {〖Beethoven〗_t}; hence, {g_t }=({〖Beethoven〗_t }  )/2. Putting it all together, 〖Σm〗_t=(t+t mod 2)/2.
+
+A closed formula for the summation of the Phish polymeter from Example 9b follows a similar logic, but is considerably more complex. As with the Beethoven hemiola, the summation for the Phish polymeter can be separated into linear and periodic components such that 〖ΣPhish〗_t= f_t+g_t ; in this case the linear component is the same as the approximation used in Example 9b: f_t=2t+1. To find g_t, then, subtract out the linear component from the summation sequence to find that {g_t }= -1, -2, -2, -1, 1, 2, 2, 1… . This turns out to be a deceptively complex sequence to work with; one way to grapple with it is to note that it features a similar symmetry to the original Phish sequence with a change in sign in the second half. The first four terms can be defined by the quadratic sequence h_t=(t^2-3t+2)/2, and the latter four terms can be defined by the quadratic sequence i_t=(〖-t〗^2+5t+2)/2 (i_t represents a 180° rotation of h_t about the point (1/2,0) ), so an ideal closed formula will map the correct terms onto the correct sequence, such as the following: 
+ g_t=  (-(t mod 8-4)*|t mod 8-4|)/2+((t mod 8)(|t mod 8-4|-|(t+1)mod 8-4|+4))/2+1
+It is beyond the scope of this article to explain exactly how each term was calculated, but the first term returns negative values for g(0), g(1), g(2), and g(3) and positive values for g(4), g(5), g(6), and g(7). The second term returns the correct linear term for each input value; and the final term replicates the constant. It is not pretty, but putting it all together and simplifying, a closed formula for the summation of the Phish polymeter can be given by:
+〖Σm〗_t=(4t+4-(t mod 8-4)*|t mod 8-4|+(t mod 8)(|t mod 8-4|-|(t+1)mod 8-4|+4))/2
+
+
+Works Cited
+
+Biamonte, Nicole. 2014. “Formal Functions of Metric Dissonance in Rock Music.” Music Theory Online 20 (2). http://www.mtosmt.org/issues/mto.14.20.2/mto.14.20.2.biamonte.php (accessed November 16, 2018).
+Callender, Clifton. 2001. “Formalized Accelerando: An Extension of Rhythmic Techniques in Nancarrow’s Acceleration Canons.” Perspectives of New Music 39 (1): 188–210.
+Cohn, Richard. 1992a. “Dramatization of Hypermetric Conflicts in the Scherzo of Beethoven’s Ninth Symphony.” 19th Century Music 15 (3): 188–206.
+———. 1992b. “Metric and Hypermetric Dissonance in the Menuetto of Mozart’s Symphony in G Minor, K. 550.” Intégral 6:1–22.
+———. 1992c. “Transpositional Combination of Beat-Class Sets in Steve Reich’s Phase-Shifting Music.” Perspectives of New Music 30 (2): 146–77.
+———. 2001. “Complex Hemiolas, Ski-Hill Graphs and Metric Spaces.” Music Analysis 20 (3): 295–326.
+Cowell, Henry. 1930. New Musical Resources. New York: Alfred A. Knopf.
+Epstein, Paul. 1986. “Pattern Structure and Process in Steve Reich’s ‘Piano Phase.’” The Musical Quarterly 72 (4): 494–502.
+Gann, Kyle. 1995. The Music of Conlon Nancarrow. New York: Cambridge University Press. Reprint, 2006.
+Goldberg, Samuel. 1986. Introduction to Difference Equations With Illustrative Examples from Economics, Psychology, and Sociology. Corrected ed. New York: Dover Publications, Inc.
+Hauptmann, Mauritz. 1873. Die Natur der Harmonik und der Metrik. 2nd ed. Leipzig: Breitkopf und Härtel.
+Horlacher, Gretchen. 1992. “The Rhythms of Reiteration: Formal Development in Stravinsky’s Ostinati.” Music Theory Spectrum 14 (2): 171–87.
+Kaminsky, Peter Michael. 1990. “Aspects of Harmony, Rhythm and Form in Schumann’s ‘Papillons’, ‘Carnaval’ and ‘Davidsbundlertanze.’” Ph.D. diss. Eastman School of Music.
+Kelley, Walter G. and Allan C. Peterson. 2001. Difference Equations: An Introduction with Applications. 2nd ed. San Diego, CA: Harcourt Academic Press.
+Krebs, Harald. 1987. “Some Extensions of the Concepts of Metrical Consonance and Dissonance.” Journal of Music Theory 31 (1): 99–120.
+———. 1999. Fantasy Pieces: Metrical Dissonance in the Music of Robert Schumann. New York: Oxford University Press. 
+Large, Edward W. and Caroline Palmer. 2002. “Perceiving Temporal Regularity in Music.” Cognitive Science 26:1–37.
+Lendvai, Ernö. 1971. Béla Bartók: An Analysis of His Work. London: Kahn & Averill.
+Lerdahl, Fred and Ray Jackendoff. 1983. A Generative Theory of Tonal Music. Cambridge, MA: The MIT Press.
+Lewin, David. 2007. Generalized Musical Intervals and Transformations. Oxford reprint. New York: Oxford University Press.
+———. 1981a. “On Harmony and Meter in Brahms’s Op. 76, No. 8.” 19th Century Music 4 (3): 261–5.
+———. 1981b. “Some Investigations into Foreground Rhythmic and Metric Patterning.” In Music Theory: Special Topics. Ed. Richmond Browne. 101–37. New York: Academic Press, Inc.
+London, Justin. 2012. Hearing in Time: Psychological Aspects of Musical Meter. 2nd ed. New York: Oxford University Press.
+Love, Stefan Caris. 2013. “Subliminal Dissonance or ‘Consonance’? Two Views of Jazz Meter.” Music Theory Spectrum 35 (1): 48–61.
+Pople, Anthony. 1998. Messiaen: Quatuor pour la fin du Temps. Cambridge, U.K.: Cambridge University Press.
+Mailman, Joshua. 2013. “Agency, Determinism, Focal Time Frames, and Processive Minimalist Music.” In Music and Narrative Since 1900. Eds. Michael Klein and Nicholas Reyland. 125–44. Bloomington: Indiana University Press.
+———. 2016. “Cybernetic Phenomenology of Music, Embodied Speculative Realism, and Aesthetics Driven Techné for Spontaneous Audio-visual Expression.” Perspectives of New Music 54 (1): 5–95.
+Mead, Andrew. 2007. “On Tempo Relations.” Perspectives of New Music 45 (1): 64–108.
+Ng, Samuel. 2005. “A Grundgestalt Interpretation of Metric Dissonance in the Music of Johannes Brahms.” Ph.D. diss. Eastman School of Music.
+———. 2006. “The Hemiolic Cycle and Metric Dissonance in the First Movement of Brahms’s Cello Sonata in F Major, Op. 99.” Theory and Practice 31:65–96.
+Roeder, John. 1995. “A Calculus of Accent.” Journal of Music Theory 39 (1): 1–46.
+———. 1994. “Interacting Pulse Streams in Schoenberg’s Atonal Polyphony.” Music Theory Spectrum 16 (2): 231–49.
+———. 2001. “Pulse Streams and Problems of Grouping and Metrical Dissonance in Bartók’s ‘With Drums and Pipes.’” Music Theory Online 7 (1). http://www.mtosmt.org/issues/mto.01.7.1/mto.01.7.1.roeder.html (accessed November 16, 2018).
+Pieslak, Jonathan. “Re-casting Metal: Rhythm and Meter in the Music of Meshuggah.” Music Theory Spectrum 29 (2):219–245.
+Pressing, Jeff. 1983. “Cognitive Isomorphisms Between Pitch and Rhythm in World Musics: West Africa, the Balkans, and Western Tonality.” Studies in Music (Australia) 17:38–61.
+Seeger, Charles. 1930. “On Dissonant Counterpoint.” Modern Music 7 (4): 25–31.
+Stockhausen, Karl. 1959. “…How Time Passes…” Die Reihe 3:10–40.
+Thomas, Margaret. 2000. “Nancarrow’s ‘Temporal Dissonance’: Issues of Tempo Proportions, Metric Synchrony, and Rhythmic Strategies.” Intégral 14/15:137–180.
+Yeston, Maury. 1976. The Stratification of Musical Rhythm. New Haven and London: Yale University Press.
+Zuckerkandl, Victor. 1959. The Sense of Music. Princeton University Press.
+       
+
+
+The author acknowledges financial support from Youngstown State University and thanks John Roeder, Ramon Satyendra, Jena Root, Guy Capuzzo, Lauren Hartburg, Yayoi Uno Everett, and an anonymous reviewer for their guidance and insights at various stages in the preparation of this essay. The author extends particular thanks to Eric J. Wingler, Professor of Mathematics and Statistics at Youngstown State University for extensive consultations regarding the mathematical formalizations used in this article.
+1 See Hauptmann (1873, 211–17), Cowell (1930, 43–108), Seeger (1930), Stockhausen (1959), Lewin (1981a and 1981b) and (1987, 38), Cohn (1992b), Mead (2007), Lendvai (1971), and Pressing (1983).
+2 See Cohn (1992b, 2), Thomas (2000, 142), Ng (2005, 10), Pieslak (2007, 221), Love (2013, 52), and Biamonte (2014, 2.1). Krebs (1987, 99–100) provides a brief overview of the discursive history of the concepts of metric consonance and dissonance as they precede Yeston.
+3 Yeston (1976, 77–78).		
+4 Krebs (1987) outlines the theory, which he later elaborates in Krebs (1999), where he adopts the terms “grouping dissonance” and “displacement dissonance,” introduced by Kaminsky (1989, 32).
+5 The New Grove offers a similar bipartite definition of “consonance,” one acoustic and one psychological. Palisca and Moore, “Consonance,” in Grove Music Online, http://oxfordmusiconline.com (accessed August 20, 2018).
+6 Gann (1995, 19–28).	
+7 Epstein (1986).
+8 Pople (1998, 20–27)
+9 Horlacher (1992).
+10 Lewin (1981a), Cohn (1992a) and (1992b).
+11 Krebs (1999, 82–114).
+12 Ng (2005, 89–181) and (2006).
+13 A D6+1 relationship also exists between the upper voice and the middle voice and between the middle voice and the lower voice. Krebs might suggest that the additional non-congruent layer increases the intensity of the dissonance (1999, 57), but for the present purposes, I restrict my focus to the outer-voice canon.
+14 The present analysis does not address a D3+2 pattern that occurs between the lower strings and the clarinets and horns.
+15 Krebs (1999, 31–34).
+16 Krebs (1999, 57–59).
+17 Krebs (1999, 30).
+18 Lewin (1981b) and Roeder (1995) represent two noteworthy predecessors in applying discrete calculus to study different kinds of musical intensities. The former employs the difference and summation operators to model a listener’s expectations of continuity over the course of rhythmically-uncertain events. The latter uses them to determine the degree of “accentual work” performed by a melody, given the contours of its pitches and their duration. The present article focuses on mathematical functions and intensity effects that are unrelated to Lewin’s and Roeder’s. More closely related to the approach taken in the present article, Callender (2001) employs differential calculus to study rhythmic effects in Conlon Nancarrow’s acceleration canons, which has particular resonances with the penultimate section of this article.
+19 As described in Online Appendix 1, the summation operation takes a sequence as its input and outputs a new sequence where each entry indicates the accumulated sum of the entries of the original sequence up to that time point. The backward difference operation takes a sequence as its input and outputs a new sequence where each entry indicates the difference between each term of the original sequence. 
+20 It seems intuitive to speak of a passage as either being dissonant (i.e. containing positive quantities of dissonance) or consonant (i.e. containing zero quantities of dissonance). By contrast, it is not immediately clear what it would mean for a passage to have negative quantities of dissonance. Therefore, for the purposes of this article, dissonance is always assumed to be non-negative (although, as addressed below, it is reasonable to consider negative changes in dissonance, which occur when a passage approaches consonance).
+21 This article takes for granted the prevailing understanding of meter as arising from a hierarchy of pulse streams, as described by Lerdahl and Jackendoff (1983, 18–21), Krebs (1999, 22), London (2012, 15–18) and many others.
+22 John Roeder (1994) and (2001) has studied conflicting pulse streams as they are articulated by multiple voices in a polyphonic texture, but the present model does not require that both appear simultaneously.
+23 Gann (1995, 21).
+24 Callender (2001, 189). See a similar construction in Mailman’s function EchoRate (2013, 134–36).
+25 Mailman (2016, 44–45) gives the name “cybernetic phenomenology” to such processes of “listening, phenomenology, and computational modeling.”
+26 Lewin (1981b), Roeder (1995).
+27 London (2012, 67).
+28 This model uses the backward, rather than the forward, difference because the former measures the change between what is currently being heard and what has just been heard, while the latter measures the change between what is currently being and what is about to be heard. Both operators return isomorphic,results, but it seems more intuitive to imagine a listener comparing the present with the past than a listener comparing the present to a prediction of the future. Lewin (1981b, 130–31) grapples with a similar decision and settles on using the forward difference in his discussion of changes of rhythmic entropy over time.
+29 Krebs (1999, 34).
+30 More precisely, ∑▒2=2t+C, but see Online Appendix 1 on omitting the constant.
+31 An anonymous reviewer notes that there is a metrically ambiguous moment in mm. 25–26, where parallelism created by the D–F motion could allow us to hear the hemiola persisting through m. 26 before breaking off.
+32 See Online Appendix 3 for an explanation of how the modulo function captures an inherently musical aspect of grouping dissonances.
+33 The plottings in Example 5 may remind the reader of similar visualizations in Zuckerkandl (1959, 114–19), Large and Palmer (2002, 12), and Stockhausen (1959, 19). The first two do not seek to model metric dissonance but rather the periodic nature of meter in general. Stockhausen is modeling the same hemiolic structure as the present article, but with a different methodology that leads to a seemingly opposite conclusion. Stockhausen’s graph indicates the total number of attacks occurring at each moment when at least one attack occurs, so the maxima on Stockhausen’s curve occur at the points of alignment in the hemiola and then decrease as it unfolds, whereas my model locates the greatest intensity at the point of furthest remove from metrical alignment.
+34 Σm_t=  (t+t mod 2)/2. See Online Appendix 3 for a discussion of how the closed formulae for summation sequences of grouping dissonances may be found. To find this and other linear approximations: first, since the sequences describing hemiolas are periodic, there is an equivalence class consisting of all time points where the hemiolas align (i.e., at t=0, 2, 4, …) and an equivalence class consisting of all time points where the hemiolas are at their furthest metrical remove (i.e. at t=1, 3, 5, …). Second, the slope of the linear approximation must be equal to the slopes of each line connecting members of an equivalence class (which must themselves all be equal). Finally, the y-intercept of the linear approximation is taken to be the average of the y-intercepts of the connecting lines.
+35 These formulae hold for the Beethoven hemiola: where x=2, the result is equivalent to m_t=t mod 2.
+36 As shown in Online Appendix 3, calculating a closed formula to describe the actual summation is possible but nontrivial.
+37 Krebs (1999, 57).
+38 Ibid. 
+39 Callender (2001) models related phenomena with differential calculus in some of Nancarrow’s acceleration canons, where the rates of change of the echo distances between parts themselves change over time; in Canon B the rate of change is constant—certainly a humane choice when composing for a live performer! Gann refers to such moments in Nancarrow’s works as “convergence points,” and explains that such moments often serve as structural markers (1995, 20–21).
+40 Krebs (1997, 33). Emphasis mine.
+41 Krebs (1997, 31–32).
+42 As Lewin (1981b) might put it, there is a massive accumulation of entropy at this moment.
+43 Note that the values on the vertical axis are two orders of magnitude greater than those on the x-axis, which results in the curve appearing much flatter than it is. Were both axes proportional, the curve’s slope would appear steep indeed.
+44 There is a problem here: the sequences’ domains are not identical, are in some cases non-overlapping, and none of the domains are defined at each and every triplet thirty-second note. It is, for example, unclear what the contribution of 〖Violin I/Cello〗_t would be at, say t=4. It cannot be 3, because we understand that to be a local maximum that only arrives at t=27. On the other hand, 0 does not seem intuitively correct either, since the dissonant process is already unfolding, and it seems as though this voice pair ought to be contributing some quantity of dissonance. My solution is to suggest that dissonance increases along the connective line in Example 16, and so I am really averaging six piecewise-defined functions that represent the line segments and vertices in Examples 15 through 17.
+45 Krebs (1999, 57).
+46 For further reading on the calculus of finite differences, see Goldberg (1986) and Kelley and Peterson (2001).
+47 A word on notation: when braces surround a term with an alphabetical index, the expression indicates the entire sequence.
+48 The first two sequences represent discrete analogues to continuous linear functions, the third sequence represents a discrete analogue to a continuous quadratic function, and the fourth sequence represents a discrete analogue to a continuous exponential function.
+49 Binet’s formula: d_n=((1+√5)^n-(1-√5)^n)/(2^n √5)
+50 It may help clarify the formula to convert the symbols into English: “The backward difference of the nth term of a sequence {a_n } is equal to the value of the nth term minus the value of the term that preceded it.” As mentioned in the body of the article, in addition to the backward difference, there is a forward difference operator, defined by ∆a_n=a_(n+1)-a_n. These difference operators are analogous to the derivative in the differential calculus.
+51 To clarify the notation: both sequences contain exactly the same numbers, even though the formulas describing them look different. This is because the sequence of indices for {∇d_n } is different than those for {d_n }. So, for example, the first term of the original sequence is 2^(0+1)=2, while the first term of its backward difference is 2^1=2. Readers with a background in mathematics will note the behavioral resemblance of this sequence to that of the exponential function in differential calculus, where if f(x)=e^x, then f'(x)=e^x.
+52 Proof that ∇d_n=2^n:
+2^n∙2^1=2^n+2^n
+2^(n+1)=2^n+2^n
+2^(n+1)-2^n=2^n
+
+Proof that for n≥2: ∇e_n=e_(n-2)
+           ∇e_n=e_n-e_(n-1) 			(by definition)
+                   =〖(e〗_(n-2)+e_(n-1))-〖(e〗_(n-1))	
+                    =e_(n-2)
+ 
+
+53 Again, with respect to differential calculus, the antidifference is analogous to the antiderivative, and the summation is analogous to the integral, which, among other things, can be used to calculate the area under a curve. In general, finding a formula’s antidifference is not a trivial task, and I will not consider it here.
+54 2^(n+2)-2^(n+1)=2^(n+1) because 2^(n+1)-2^n=2^n, as proven in note 52 above. Proof that e_(n+2)-e_(n+1)=e_n  for n≥2: since by definition 〖e_n=e〗_(n-2)+e_(n-1), it must follow that e_(n+2) 〖=e〗_n 〖+e〗_(n+1). Then e_(n+2)-〖e_(n+1)=e〗_n.
+55 Again, it may be helpful to translate these formulas into English: “〖Phish〗_t is equal to [a function of t], where t equals any natural number (i.e., 0, 1, 2, 3, etc.) multiplied by 9.” 
+---------------
+
+------------------------------------------------------------
+
+
+
+---------------
+
+------------------------------------------------------------
+
+
+
+32
+
+

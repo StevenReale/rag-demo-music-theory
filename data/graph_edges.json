@@ -1,0 +1,356 @@
+[
+  {
+    "source": "work:persistence_of_groove",
+    "target": "performance:split_open_and_melt_bomb_factory",
+    "type": "analyzes",
+    "description": "Close analysis of the 5/7/1994 Phish 'Split Open and Melt' jam."
+  },
+  {
+    "source": "performance:split_open_and_melt_bomb_factory",
+    "target": "artist:phish",
+    "type": "performed_by",
+    "description": "Jam is performed by Phish."
+  },
+  {
+    "source": "work:analytical_traditions",
+    "target": "game:super_mario_galaxy",
+    "type": "analyzes",
+    "description": "Uses Super Mario Galaxy as a case study in applying film-analytic traditions to game music."
+  },
+  {
+    "source": "work:barriers_to_listening",
+    "target": "game:world_of_warcraft",
+    "type": "analyzes",
+    "description": "Examines how design of World of Warcraft structures access to its music."
+  },
+  {
+    "source": "work:chaos_in_the_cosmos",
+    "target": "game:katamari_damacy",
+    "type": "analyzes",
+    "description": "Interprets contradictions in the music and narrative of Katamari Damacy."
+  },
+  {
+    "source": "work:transcribing_musical_worlds",
+    "target": "game:guitar_hero",
+    "type": "analyzes",
+    "description": "Treats Guitar Hero as a paradigmatic music game with notated performance."
+  },
+  {
+    "source": "work:transcribing_musical_worlds",
+    "target": "game:bit_trip_beat",
+    "type": "analyzes",
+    "description": "Discusses BIT.TRIP BEAT as a game that links obstacles and music."
+  },
+  {
+    "source": "work:transcribing_musical_worlds",
+    "target": "game:bit_trip_runner",
+    "type": "analyzes",
+    "description": "Analyzes BIT.TRIP RUNNER and its musically organized geography."
+  },
+  {
+    "source": "work:transcribing_musical_worlds",
+    "target": "game:dyad",
+    "type": "analyzes",
+    "description": "Uses Dyad as an example of an active score whose music is realized through play."
+  },
+  {
+    "source": "work:transcribing_musical_worlds",
+    "target": "game:la_noire",
+    "type": "analyzes",
+    "description": "Asks whether L.A. Noire can be read as a music game via its investigative cues."
+  },
+  {
+    "source": "work:sheep_in_wolfs_corset",
+    "target": "media:rocky_horror_picture_show",
+    "type": "analyzes",
+    "description": "Reads The Rocky Horror Picture Show through its vocal timbre and instrumentation."
+  },
+  {
+    "source": "work:sheep_in_wolfs_corset",
+    "target": "media:glee_rocky_horror_glee_show",
+    "type": "analyzes",
+    "description": "Compares Glee's 'The Rocky Horror Glee Show' episode with the original film."
+  },
+  {
+    "source": "work:persistence_of_groove",
+    "target": "concept:structural_fog",
+    "type": "defines",
+    "description": "Introduces 'structural fog' to describe high-intensity, densely layered grooves."
+  },
+  {
+    "source": "work:persistence_of_groove",
+    "target": "concept:jouissance",
+    "type": "relates",
+    "description": "Connects listeners' experience of structural fog to jouissance."
+  },
+  {
+    "source": "work:persistence_of_groove",
+    "target": "concept:groove",
+    "type": "extends",
+    "description": "Builds on groove theory to explain long-form improvisation."
+  },
+  {
+    "source": "work:persistence_of_groove",
+    "target": "concept:participatory_discrepancies",
+    "type": "draws_on",
+    "description": "Uses Keil's participatory discrepancies as a foundation for groove analysis."
+  },
+  {
+    "source": "work:calculus_of_finite_dissonances",
+    "target": "concept:metric_dissonance",
+    "type": "formalizes",
+    "description": "Provides a calculus-based model for finite metric dissonances."
+  },
+  {
+    "source": "work:calculus_of_finite_dissonances",
+    "target": "concept:grouping_dissonance",
+    "type": "formalizes",
+    "description": "Models grouping dissonance and its summation over time."
+  },
+  {
+    "source": "work:barriers_to_listening",
+    "target": "concept:barriers_to_listening",
+    "type": "defines",
+    "description": "Coins and taxonomizes barriers to listening in a large-scale online game."
+  },
+  {
+    "source": "work:barriers_to_listening",
+    "target": "concept:synchronic_barrier",
+    "type": "defines",
+    "description": "Defines synchronic barriers tied to player situation in the current version of the game."
+  },
+  {
+    "source": "work:barriers_to_listening",
+    "target": "concept:diachronic_barrier",
+    "type": "defines",
+    "description": "Defines diachronic barriers that emerge across the game's lifespan."
+  },
+  {
+    "source": "work:transcribing_musical_worlds",
+    "target": "concept:game_world_as_score",
+    "type": "proposes",
+    "description": "Argues that in some games the world functions as a musical score."
+  },
+  {
+    "source": "work:transcribing_musical_worlds",
+    "target": "concept:music_game",
+    "type": "thematizes",
+    "description": "Situates titles like Guitar Hero and Dyad within the category of music games."
+  },
+  {
+    "source": "work:transcribing_musical_worlds",
+    "target": "concept:ludic_primacy",
+    "type": "critiques",
+    "description": "Questions the assumption of ludic primacy in game-music discourse."
+  },
+  {
+    "source": "work:transcribing_musical_worlds",
+    "target": "concept:musical_supplementarity",
+    "type": "critiques",
+    "description": "Challenges views of music as merely supplementary to gameplay."
+  },
+  {
+    "source": "work:analytical_traditions",
+    "target": "concept:transformational_analysis",
+    "type": "applies",
+    "description": "Uses transformational networks to analyze key relations in Super Mario Galaxy."
+  },
+  {
+    "source": "work:analytical_traditions",
+    "target": "concept:neo_riemannian_theory",
+    "type": "applies",
+    "description": "Employs neo-Riemannian operations to trace tonal paths between galaxies."
+  },
+  {
+    "source": "work:analytical_traditions",
+    "target": "concept:schenkerian_analysis",
+    "type": "applies",
+    "description": "Adapts Schenkerian methods to game music, including boss themes."
+  },
+  {
+    "source": "work:analytical_traditions",
+    "target": "concept:tonnetz",
+    "type": "applies",
+    "description": "Uses Tonnetz diagrams to visualize transformational spaces."
+  },
+  {
+    "source": "work:analytical_traditions",
+    "target": "concept:ludomusicology",
+    "type": "situates_within",
+    "description": "Places the study within broader analytical traditions in ludomusicology."
+  },
+  {
+    "source": "work:chaos_in_the_cosmos",
+    "target": "concept:contradictory_sound_image",
+    "type": "theorizes",
+    "description": "Shows how Katamari's cheerful music coexists with darker narrative implications."
+  },
+  {
+    "source": "work:sheep_in_wolfs_corset",
+    "target": "concept:timbral_signifiers_of_gender",
+    "type": "theorizes",
+    "description": "Uses vocal and timbral analysis to read gender and sexuality in Rocky Horror and Glee."
+  },
+  {
+    "source": "work:sheep_in_wolfs_corset",
+    "target": "concept:masculine_agency",
+    "type": "argues",
+    "description": "Argues that musical details ultimately reinforce masculine agency."
+  },
+  {
+    "source": "work:sheep_in_wolfs_corset",
+    "target": "concept:contradictory_sound_image",
+    "type": "theorizes",
+    "description": "Shows tensions between the film's apparent sexual liberation and its musical rhetoric."
+  },
+  {
+    "source": "work:barriers_to_listening",
+    "target": "concept:ludomusicology",
+    "type": "situates_within",
+    "description": "Relates barriers-to-listening framework to ongoing work in ludomusicology."
+  },
+  {
+    "source": "work:transcribing_musical_worlds",
+    "target": "concept:ludomusicology",
+    "type": "situates_within",
+    "description": "Connects the game-world-as-score idea to the broader field of ludomusicology."
+  },
+  {
+    "source": "concept:structural_fog",
+    "target": "concept:jouissance",
+    "type": "elicits",
+    "description": "Structural fog is proposed as a musical condition that can elicit jouissance."
+  },
+  {
+    "source": "concept:structural_fog",
+    "target": "concept:groove",
+    "type": "specializes",
+    "description": "Structural fog is a specific state within ongoing groove."
+  },
+  {
+    "source": "concept:grouping_dissonance",
+    "target": "concept:metric_dissonance",
+    "type": "subtype_of",
+    "description": "Grouping dissonance is described as a subtype of metric dissonance."
+  },
+  {
+    "source": "concept:synchronic_barrier",
+    "target": "concept:barriers_to_listening",
+    "type": "subtype_of",
+    "description": "Synchronic barriers are one axis of the barriers-to-listening taxonomy."
+  },
+  {
+    "source": "concept:diachronic_barrier",
+    "target": "concept:barriers_to_listening",
+    "type": "subtype_of",
+    "description": "Diachronic barriers form the other axis of the taxonomy."
+  },
+  {
+    "source": "concept:timbral_signifiers_of_gender",
+    "target": "concept:masculine_agency",
+    "type": "supports",
+    "description": "Timbral readings support claims about how agency is gendered."
+  },
+  {
+    "source": "concept:structural_fog",
+    "target": "performance:split_open_and_melt_bomb_factory",
+    "type": "observed_in",
+    "description": "Structural fog is mapped across loops of the Split Open and Melt jam."
+  },
+  {
+    "source": "concept:metric_dissonance",
+    "target": "work:calculus_of_finite_dissonances",
+    "type": "central_to",
+    "description": "Metric dissonance is the core analytical focus of the article."
+  },
+  {
+    "source": "concept:barriers_to_listening",
+    "target": "game:world_of_warcraft",
+    "type": "shapes_experience_of",
+    "description": "Barriers to listening determine who can hear which music in World of Warcraft."
+  },
+  {
+    "source": "concept:game_world_as_score",
+    "target": "game:bit_trip_runner",
+    "type": "modeled_in",
+    "description": "BIT.TRIP RUNNER's level geography functions as a kind of scrollable score."
+  },
+  {
+    "source": "concept:game_world_as_score",
+    "target": "game:dyad",
+    "type": "modeled_in",
+    "description": "Dyad's cylindrical track and events are treated as a kind of musical notation."
+  },
+  {
+    "source": "concept:game_world_as_score",
+    "target": "game:la_noire",
+    "type": "questioned_in",
+    "description": "The article asks whether L.A. Noire's investigation cues justify reading it as a music game."
+  },
+  {
+    "source": "concept:music_game",
+    "target": "game:guitar_hero",
+    "type": "instance_of",
+    "description": "Guitar Hero is treated as a central example of a music game."
+  },
+  {
+    "source": "concept:music_game",
+    "target": "game:bit_trip_beat",
+    "type": "instance_of",
+    "description": "BIT.TRIP BEAT is categorized as a music game."
+  },
+  {
+    "source": "concept:music_game",
+    "target": "game:bit_trip_runner",
+    "type": "instance_of",
+    "description": "BIT.TRIP RUNNER is categorized as a music game."
+  },
+  {
+    "source": "concept:music_game",
+    "target": "game:dyad",
+    "type": "instance_of",
+    "description": "Dyad is categorized as a music game."
+  },
+  {
+    "source": "concept:transformational_analysis",
+    "target": "game:super_mario_galaxy",
+    "type": "used_on",
+    "description": "Transformational networks model tonal relations among Super Mario Galaxy levels."
+  },
+  {
+    "source": "concept:neo_riemannian_theory",
+    "target": "game:super_mario_galaxy",
+    "type": "used_on",
+    "description": "Neo-Riemannian operations track moves between key centers in the game."
+  },
+  {
+    "source": "concept:schenkerian_analysis",
+    "target": "game:super_mario_galaxy",
+    "type": "used_on",
+    "description": "Schenkerian reductions interpret boss themes and level music."
+  },
+  {
+    "source": "concept:contradictory_sound_image",
+    "target": "game:katamari_damacy",
+    "type": "observed_in",
+    "description": "Cheerful surface music contrasts with darker implications in Katamari Damacy."
+  },
+  {
+    "source": "concept:contradictory_sound_image",
+    "target": "media:rocky_horror_picture_show",
+    "type": "observed_in",
+    "description": "Campy rock musical style coexists with conservative resolutions of gender roles."
+  },
+  {
+    "source": "concept:timbral_signifiers_of_gender",
+    "target": "media:rocky_horror_picture_show",
+    "type": "analyzed_in",
+    "description": "Vocal timbres in the film are read as gendered signifiers."
+  },
+  {
+    "source": "concept:timbral_signifiers_of_gender",
+    "target": "media:glee_rocky_horror_glee_show",
+    "type": "analyzed_in",
+    "description": "Glee's cover performances are compared through their timbral profiles."
+  }
+]

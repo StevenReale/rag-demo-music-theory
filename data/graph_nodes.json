@@ -1,0 +1,243 @@
+[
+  {
+    "id": "work:persistence_of_groove",
+    "type": "work",
+    "title": "On the Persistence of Groove: Structural Fog and Jouissance in a 'Split Open and Melt' Jam",
+    "short_title": "Persistence of Groove",
+    "source_file": "Persistence-of-Groove.txt"
+  },
+  {
+    "id": "work:analytical_traditions",
+    "type": "work",
+    "title": "Analytical Traditions and Game Music: Super Mario Galaxy as Case Study",
+    "short_title": "Analytical Traditions & Game Music",
+    "source_file": "ANALYTICAL-TRADITIONS-AND-GAME-MUSIC.txt"
+  },
+  {
+    "id": "work:transcribing_musical_worlds",
+    "type": "work",
+    "title": "Transcribing Musical Worlds, or, Is L.A. Noire a Music Game?",
+    "short_title": "Transcribing Musical Worlds",
+    "source_file": "Transcribing-Musical-Worlds-Manuscript.txt"
+  },
+  {
+    "id": "work:calculus_of_finite_dissonances",
+    "type": "work",
+    "title": "The Calculus of Finite (Metric) Dissonances",
+    "short_title": "Calculus of Finite Dissonances",
+    "source_file": "CalculusofFiniteDissonances.txt"
+  },
+  {
+    "id": "work:barriers_to_listening",
+    "type": "work",
+    "title": "Barriers to Listening in World of Warcraft",
+    "short_title": "Barriers to Listening",
+    "source_file": "Barriers-to-Listening.txt"
+  },
+  {
+    "id": "work:sheep_in_wolfs_corset",
+    "type": "work",
+    "title": "A Sheep in Wolf's Corset: Timbral and Vocal Signifiers in The Rocky Horror Picture Show and Glee",
+    "short_title": "Sheep in Wolf's Corset",
+    "source_file": "Sheep-In-Wolfs-Corset.txt"
+  },
+  {
+    "id": "work:chaos_in_the_cosmos",
+    "type": "work",
+    "title": "Chaos in the Cosmos: The Play of Contradictions in the Music of Katamari Damacy",
+    "short_title": "Chaos in the Cosmos",
+    "source_file": "Chaos-In-The-Cosmos.txt"
+  },
+  {
+    "id": "game:super_mario_galaxy",
+    "type": "game",
+    "name": "Super Mario Galaxy"
+  },
+  {
+    "id": "game:world_of_warcraft",
+    "type": "game",
+    "name": "World of Warcraft"
+  },
+  {
+    "id": "game:katamari_damacy",
+    "type": "game",
+    "name": "Katamari Damacy"
+  },
+  {
+    "id": "game:la_noire",
+    "type": "game",
+    "name": "L.A. Noire"
+  },
+  {
+    "id": "game:guitar_hero",
+    "type": "game",
+    "name": "Guitar Hero"
+  },
+  {
+    "id": "game:bit_trip_beat",
+    "type": "game",
+    "name": "BIT.TRIP BEAT"
+  },
+  {
+    "id": "game:bit_trip_runner",
+    "type": "game",
+    "name": "BIT.TRIP RUNNER"
+  },
+  {
+    "id": "game:dyad",
+    "type": "game",
+    "name": "Dyad"
+  },
+  {
+    "id": "media:rocky_horror_picture_show",
+    "type": "media",
+    "media_type": "film",
+    "name": "The Rocky Horror Picture Show"
+  },
+  {
+    "id": "media:glee_rocky_horror_glee_show",
+    "type": "media",
+    "media_type": "tv_episode",
+    "name": "Glee: \"The Rocky Horror Glee Show\""
+  },
+  {
+    "id": "artist:phish",
+    "type": "artist",
+    "name": "Phish"
+  },
+  {
+    "id": "performance:split_open_and_melt_bomb_factory",
+    "type": "performance",
+    "name": "\"Split Open and Melt\" jam (Bomb Factory, Dallas)"
+  },
+
+  {
+    "id": "concept:groove",
+    "type": "concept",
+    "name": "Groove",
+    "description": "Feel-based rhythmic patterning that invites bodily entrainment and movement."
+  },
+  {
+    "id": "concept:structural_fog",
+    "type": "concept",
+    "name": "Structural fog",
+    "description": "Moments of maximal textural and rhythmic density in a groove that cloud perceivable structure."
+  },
+  {
+    "id": "concept:jouissance",
+    "type": "concept",
+    "name": "Jouissance",
+    "description": "Intense, often overwhelming pleasure that mixes delight and discomfort."
+  },
+  {
+    "id": "concept:participatory_discrepancies",
+    "type": "concept",
+    "name": "Participatory discrepancies",
+    "description": "Microtiming deviations among performers that contribute to groove and feel."
+  },
+  {
+    "id": "concept:metric_dissonance",
+    "type": "concept",
+    "name": "Metric dissonance",
+    "description": "Conflicts between layers of rhythmic grouping or accent that create metrical tension."
+  },
+  {
+    "id": "concept:grouping_dissonance",
+    "type": "concept",
+    "name": "Grouping dissonance",
+    "description": "A type of metric dissonance arising from incompatible grouping structures."
+  },
+
+  {
+    "id": "concept:barriers_to_listening",
+    "type": "concept",
+    "name": "Barriers to listening",
+    "description": "Game design features that prevent or complicate players' access to particular music."
+  },
+  {
+    "id": "concept:synchronic_barrier",
+    "type": "concept",
+    "name": "Synchronic barrier",
+    "description": "Barriers tied to a player's situation at a single moment in the game's lifecycle."
+  },
+  {
+    "id": "concept:diachronic_barrier",
+    "type": "concept",
+    "name": "Diachronic barrier",
+    "description": "Barriers that arise or change over the historical lifespan of a game."
+  },
+
+  {
+    "id": "concept:game_world_as_score",
+    "type": "concept",
+    "name": "Game world as score",
+    "description": "The idea that spatial and ludic game structures function like a musical score to be performed."
+  },
+  {
+    "id": "concept:music_game",
+    "type": "concept",
+    "name": "Music game",
+    "description": "Games whose core mechanics are organized around performing or interacting with music."
+  },
+  {
+    "id": "concept:ludic_primacy",
+    "type": "concept",
+    "name": "Ludic primacy",
+    "description": "The assumption that gameplay has ontological priority over music or audiovisual elements."
+  },
+  {
+    "id": "concept:musical_supplementarity",
+    "type": "concept",
+    "name": "Musical supplementarity",
+    "description": "The assumption that music merely decorates or supports pre-existing gameplay and narrative."
+  },
+  {
+    "id": "concept:transformational_analysis",
+    "type": "concept",
+    "name": "Transformational analysis",
+    "description": "Analytical approach that models music as networks of transformations between states."
+  },
+  {
+    "id": "concept:neo_riemannian_theory",
+    "type": "concept",
+    "name": "Neo-Riemannian theory",
+    "description": "Transformational theory focusing on parsimonious moves between triads."
+  },
+  {
+    "id": "concept:schenkerian_analysis",
+    "type": "concept",
+    "name": "Schenkerian analysis",
+    "description": "Reductive method that relates surface events to deep background structures."
+  },
+  {
+    "id": "concept:tonnetz",
+    "type": "concept",
+    "name": "Tonnetz",
+    "description": "Lattice diagram representing harmonic relations among triads and pitch classes."
+  },
+
+  {
+    "id": "concept:contradictory_sound_image",
+    "type": "concept",
+    "name": "Contradictory sound-image relation",
+    "description": "Tension between what music seems to imply and what visuals or narrative present."
+  },
+  {
+    "id": "concept:timbral_signifiers_of_gender",
+    "type": "concept",
+    "name": "Timbral signifiers of gender",
+    "description": "Associations between vocal/instrumental timbre and gendered identities."
+  },
+  {
+    "id": "concept:masculine_agency",
+    "type": "concept",
+    "name": "Masculine agency",
+    "description": "The way musical roles and vocal writing can privilege male control and subjectivity."
+  },
+  {
+    "id": "concept:ludomusicology",
+    "type": "concept",
+    "name": "Ludomusicology",
+    "description": "Scholarly study of music in and around games and play."
+  }
+]
