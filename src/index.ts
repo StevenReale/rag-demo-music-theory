@@ -1,68 +1,87 @@
 import "dotenv/config";
-import { loadResearchDocs, chunkDocs } from "./corpus";
-import { getPreview } from "./textUtils";
-import { promptQuery } from "./console"
-import { buildRagContext } from "./ragPipeline";
-import { EmbeddedChunk } from "./types";
-import { buildEmbeddedIndex } from "./embeddingRetrieval";
-import { generateAnswer } from "./generation";
+import { loadResearchDocs, chunkDocs } from "@/model/corpus";
+import * as cli from "@/cli/console";
+import { buildRagContextEmbedded, buildRagContextKeyword } from "@/pipelines/flatRagPipeline";
+import { EmbeddedChunk, RagContext } from "@/library/types";
+import { buildEmbeddedIndex } from "@/retrieval/embeddingRetrieval";
+import { generateAnswer } from "@/openai/generation";
+import { loadKnowledgeGraph, KnowledgeGraph } from "@/model/knowledgeGraph";
+import { buildRagContextGraph } from "@/pipelines/graphRagPipeline";
+import { MAX_CHUNKS_PER_QUERY, MAX_CHARS_PER_CHUNK } from "./appConfig";
 
 async function main() {
     console.log("RAG playground starting...");
 
+    //prompt for operating modes
+    const verbose: boolean = await cli.promptToggleVerbose();
+    const mode: cli.RetrievalMode = await cli.promptRetrievalMode();
+    
+    //load research docs
     const docs = await loadResearchDocs();
-
     console.log(`Loaded ${docs.length} research document(s).\n`);
-
-    for (const doc of docs) {
-        const preview = getPreview(doc.content, 200);
-        console.log(`--- [${doc.id}] (${doc.filename}) ---`);
-        console.log(preview);
-        console.log();
-    }
-
-    const chunks = chunkDocs(docs, 800);
+    if (verbose) cli.previewDocs(docs);
+    
+    //chunk docs
+    const chunks = chunkDocs(docs, MAX_CHARS_PER_CHUNK);
     console.log(`Created ${chunks.length} chunk(s) total.\n`);
 
-    console.log("Computing embeddings for all chunks / loading cache...");
-    const embeddedChunks: EmbeddedChunk[] = await buildEmbeddedIndex(chunks);
-    console.log(`Embedded ${embeddedChunks.length} chunks.\n`);
+    //embed if requested
+    let embeddedChunks: EmbeddedChunk[] | null = null;
+    if (mode === "embedding" || mode === "graph"){
+        console.log("Computing embeddings for all chunks / loading cache...");
+        embeddedChunks = await buildEmbeddedIndex(chunks);
+        console.log(`Embedded ${embeddedChunks.length} chunks.\n`);
+    }
 
+    //generate graph in graph mode
+    let graph: KnowledgeGraph | null = null;
+    if (mode === "graph"){
+        graph = await loadKnowledgeGraph();
+    }
+
+    //main querying loop
     while(true) {
-        const query = await promptQuery();
-
+        const query = await cli.promptQuery();
         if (!query.trim()) {
             console.log("No query entered. Exiting.");
             break;
         }
 
-        const ragContext = await buildRagContext(embeddedChunks, query, 5);
+        let ragContext: RagContext;
 
+        if (mode === "keyword") {
+        ragContext = buildRagContextKeyword(chunks, query, MAX_CHUNKS_PER_QUERY, verbose);
+        } else if (mode === "embedding") {
+        if (!embeddedChunks) {
+            throw new Error("Embedded index not initialized.");
+        }
+        ragContext = await buildRagContextEmbedded(embeddedChunks, query, MAX_CHUNKS_PER_QUERY);
+        } else {
+            // graph mode
+            if (!embeddedChunks) {
+                throw new Error("Embedded index not initialized.");
+            }
+            if(!graph) throw new Error("Knowledge graph not initialized.");
+
+            ragContext = await buildRagContextGraph(
+                graph,
+                embeddedChunks,
+                query,
+                MAX_CHUNKS_PER_QUERY,
+                verbose
+            );
+        }
+        
         if (ragContext.results.length === 0) {
             console.log("No matching chunks found.\n");
             continue;
         }
 
-        console.log(`\nTop ${ragContext.results.length} chunks for query: "${query}"\n`);
+        if (verbose) cli.previewRagContext(ragContext, query);
 
-        for (const {chunk, score} of ragContext.results) {
-            const preview = getPreview(chunk.text, 200);
-            console.log(
-                `Score = ${score} | doc=${chunk.docId} | chunkIndex = ${chunk.chunkIndex}`
-            );
-            console.log(preview);
-            console.log();
-        }
-        console.log("=== RAG context being sent to the LLM ===\n");
-        console.log(`User question:\n${ragContext.query}\n`);
-        console.log("Retrieved context:\n");
-        console.log(ragContext.contextText);
-        console.log("\n===========================================\n");
-
-        console.log("===Model answer===");
+        cli.logQueryStart();
         const answer = await generateAnswer(ragContext);
-        console.log(answer);
-        console.log("\n===========================================\n");        
+        cli.printModelAnswer(answer);
     }
 }
 
