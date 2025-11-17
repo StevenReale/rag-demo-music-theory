@@ -137,38 +137,22 @@ The examples below are illustrative; the exact wording of the model’s answer w
 **Best for:** simple lexical queries, or when you want to inspect DF/IDF-style behavior.
 
 ```text
-$ npm run dev
-
-> rag-demo@1.0.0 dev
-> ts-node  -r tsconfig-paths/register src/index.ts
-
-RAG playground starting...
-Enable verbose mode? [y]/n: n
-Disabling verbose mode.
-
-Select retrieval mode: [1] keyword, [2] embedding, [3] graph (default): 1
-Using retrieval mode: keyword
-
-Loaded 7 research document(s).
-
-Created 395 chunk(s) total.
-
 Enter a search query (or press Enter to exit): Structural fog and jouissance
 Querying...
 === Model answer ===
-Structural fog is the moments in groove-based performance (notably Phish) when players push away from the established groove and chaos or cacophony momentarily dominates. The band must still hear and track the groove “in absentia” in order to snap back into it together at the next logical point, so the fog is both a risk and a controlled theatrical device. These moments are described as being surrounded by fog, then cleared in unison as a new loop is due to begin. They are nonrandom, engineered disruptions within the improvisational dialogue that can be intensely felt by listeners. (Sources: Persistence-of-Groove, especially chunkIndex 5; and related discussion in chunks 8 and 9.)
-
-How this connects to jouissance (the Lacanian concept):
-- Jouissance is Lacan’s term for an excessive, often painful pleasure—pleasure that exceeds the pleasure principle and can involve both enjoyment and suffering. In this framework, the fog moments contribute to a heightened experience because they push listeners beyond normal groove expectations. (Source: Source 1, chunkIndex 13; also echoed in Source 6, chunkIndex 37.)
-- A useful adaptation in this groove context is the idea of a “groove principle”: there is a temporal/quantitative limit to how much a groove can be deviated before pleasure wanes and anxiety or pain (the painful side of jouissance) sets in. Structural fog tests that limit: it can be euphoric within bounds, but excessive deviation can become painful. (Source: Source 7, chunkIndex 14; and related discussion in Source 6, chunkIndex 37.)
-- The audience’s experience often oscillates between anticipation, euphoria, and relief: moments when the fog thickens can be experienced as intense and almost overwhelming, while the fog clearing into a reasserted groove yields cathartic release. Fans describe both the ecstasy of the ride and the sharp turn toward chaos, followed by the satisfaction of the groove’s return. (Sources: Source 2, chunkIndex 5; Source 8, chunkIndex 9; Source 6, chunkIndex 37.)
-
-Additional nuances from the sources:
-- The structural fog is not just chaos for chaos’s sake; it’s part of the improvisational conversation. Even at the most deconstructed moments, players are effectively “performing against” the groove and must be attuned to it to rejoin it at the right moment. This tension—between deconstruction and re-entry—contributes to the sense of jouissance as a combined pleasure-pain experience. (Sources: Source 2, chunkIndex 5; Source 8, chunkIndex 9; Source 3, chunkIndex 38.)
-- For some listeners, the appeal of the fog lies in the possibility that the band will surprise with a bustout or novel deviation, which heightens the sense of anticipation and makes the eventual return to the groove even more rewarding. The pleasure of “seeing through the fog” to the underlying groove is itself a source of jouissance for fans who have the context to appreciate the deviation. (Source: Source 3, chunkIndex 38.)
-
-In short: Structural fog functions as a vehicle for jouissance in groove-based performance. It creates a tense, expectancy-filled zone between familiar groove and inventive deviation. When the band snaps back into the groove, the release can be cathartic and intensely pleasurable, but if the deviation crosses the groove-principle threshold, the experience can become painful or anxiety-provoking. This dynamic helps explain why structural fog is a signature feature of the live groove experience and a key site of its psychoanalytic appeal. (Cited concepts across Sources 1, 2, 3, 6, 7, and 8.)
 ```
+> Structural fog is the moments in groove-based performance (notably Phish) when players push away from the established groove and chaos or cacophony momentarily dominates. The band must still hear and track the groove “in absentia” in order to snap back into it together at the next logical point, so the fog is both a risk and a controlled theatrical device. These moments are described as being surrounded by fog, then cleared in unison as a new loop is due to begin. They are nonrandom, engineered disruptions within the improvisational dialogue that can be intensely felt by listeners. (Sources: Persistence-of-Groove, especially chunkIndex 5; and related discussion in chunks 8 and 9.)
+> 
+> How this connects to jouissance (the Lacanian concept):
+> - Jouissance is Lacan’s term for an excessive, often painful pleasure—pleasure that exceeds the pleasure principle and can involve both enjoyment and suffering. In this framework, the fog moments contribute to a heightened experience because they push listeners beyond normal groove expectations. (Source: Source 1, chunkIndex 13; also echoed in Source 6, chunkIndex 37.)
+> - A useful adaptation in this groove context is the idea of a “groove principle”: there is a temporal/quantitative limit to how much a groove can be deviated before pleasure wanes and anxiety or pain (the painful side of jouissance) sets in. Structural fog tests that limit: it can be euphoric within bounds, but excessive deviation can become painful. (Source: Source 7, chunkIndex 14; and related discussion in Source 6, chunkIndex 37.)
+> - The audience’s experience often oscillates between anticipation, euphoria, and relief: moments when the fog thickens can be experienced as intense and almost overwhelming, while the fog clearing into a reasserted groove yields cathartic release. Fans describe both the ecstasy of the ride and the sharp turn toward chaos, followed by the satisfaction of the groove’s return. (Sources: Source 2, chunkIndex 5; Source 8, chunkIndex 9; Source 6, chunkIndex 37.)
+> 
+> Additional nuances from the sources:
+> - The structural fog is not just chaos for chaos’s sake; it’s part of the improvisational conversation. Even at the most deconstructed moments, players are effectively “performing against” the groove and must be attuned to it to rejoin it at the right moment. This tension—between deconstruction and re-entry—contributes to the sense of jouissance as a combined pleasure-pain experience. (Sources: Source 2, chunkIndex 5; Source 8, chunkIndex 9; Source 3, chunkIndex 38.)
+> - For some listeners, the appeal of the fog lies in the possibility that the band will surprise with a bustout or novel deviation, which heightens the sense of anticipation and makes the eventual return to the groove even more rewarding. The pleasure of “seeing through the fog” to the underlying groove is itself a source of jouissance for fans who have the context to appreciate the deviation. (Source: Source 3, chunkIndex 38.)
+> 
+> In short: Structural fog functions as a vehicle for jouissance in groove-based performance. It creates a tense, expectancy-filled zone between familiar groove and inventive deviation. When the band snaps back into the groove, the release can be cathartic and intensely pleasurable, but if the deviation crosses the groove-principle threshold, the experience can become painful or anxiety-provoking. This dynamic helps explain why structural fog is a signature feature of the live groove experience and a key site of its psychoanalytic appeal. (Cited concepts across Sources 1, 2, 3, 6, 7, and 8.)
 
 You’ll see that keyword mode tends to stay within a single work and strongly favors literal matches like “listening” and “World of Warcraft”.
 
@@ -179,47 +163,27 @@ You’ll see that keyword mode tends to stay within a single work and strongly f
 **Best for:** paraphrased questions and more semantic matching.
 
 ```text
-$ npm run dev
-
-> rag-demo@1.0.0 dev
-> ts-node  -r tsconfig-paths/register src/index.ts
-
-RAG playground starting...
-Enable verbose mode? [y]/n: n
-Disabling verbose mode.
-
-Select retrieval mode: [1] keyword, [2] embedding, [3] graph (default): 2
-Using retrieval mode: embedding
-
-Loaded 7 research document(s).
-
-Created 395 chunk(s) total.
-
-Computing embeddings for all chunks / loading cache...
-Loaded embeddings from cache.
-Embedded 395 chunks.
-
 Enter a search query (or press Enter to exit): What prevents players from hearing the music in World of Warcraft?
 Querying...
 === Model answer ===
-Steven Reale describes barriers that prevent players from hearing World of Warcraft’s music in two broad categories: synchronic barriers (at a given moment in the game) and diachronic barriers (developing over patches/expansions). Here are the main ways those barriers work, with examples from the sources:
-
-- Synchronic barriers (present at a specific time or context)
-  - Faction and location boundaries: Certain music cues are tied to a faction or to a particular place. For example, the Orgrimmar entry cue is heard by Horde players, while Alliance players may never hear it; likewise, Alliance has its own Brewfest polka, which Horde players may not hear. These create coarse synchronic barriers that can be very concrete (who you are and where you are) at a given moment. Source 4; Source 3.
-  - Zone-specific music you must physically be in: Some pieces (like Terrokar Forest music) only play in specific zones, and even in-game menus or rolls don’t always let you hear them unless you travel there. The Terrokar Forest cue does not appear on a music roll; you must travel to Outland to hear it. Source 7.
-  - Time- and activity-driven barriers (incentives push you away from listening): The game’s incentive structure pushes players toward higher-level zones and reward-rich content, which can pull attention away from listening to the score. This “coarse synchronic barrier” is created by how players are guided to play. Source 5.
-  - End-game gating and gating by progression: Some music accompanies encounters (like Kil’jaeden) that require reaching certain raid progress. If you can’t/ don’t progress to that content, you miss hearing that music. Over time, later expansions can make these encounters easier to reach (reducing the barrier for some players, but the barrier exists in earlier periods). Source 5; Source 1.
-
-- Diachronic barriers (develop over patches/expansions)
-  - Content updates and expansion cycles: The MMORPG model of ongoing expansions creates diachronic barriers because the game is continually updated, and older music may become unavailable or relocated as content changes. For instance, The Burning Crusade added new zones and music and created a diachronic barrier to listening to older content (e.g., Silithus music). Source 1; Source 6.
-  - Music’s indeterminacy across playthroughs: Because WoW’s music can be renegotiated with each play session and patches, a score once heard may not be heard again in the same way, meaning the opportunity to hear certain pieces is inherently unstable over time. Source 2.
-  - Phase changes and housing systems changing listening access: Blizzard’s phasing and the garrison system alter what players can see/hear; even with new features like jukeboxes in garrisons, some music (like Terrokar Forest cues) isn’t fully available via simple in-game rolls and still requires traveling to certain areas. This represents a diachronic shift in how accessible music is over time. Source 7; Source 4.
-
-- Additional nuance
-  - The score’s overall instability and renewal: Since World of Warcraft’s soundtrack is tied to a dynamic game world that is frequently revised, what can be heard and when is inherently unstable across playthroughs and updates. This is framed as a broader indeterminacy about listening opportunities in WoW. Source 2.
-
-In short, what prevents players from hearing the music are a mix of: being in the wrong faction or location (synchronic barriers), not visiting the right zones or engaging with certain activities (synchronic barriers), and expansions/patch cycles that relocate, retire, or alter access to music (diachronic barriers). The result is that many pieces of music are accessible only to a subset of players at certain times, or may not be heard at all across a given playthrough. Source references: 2, 4, 3, 7, 1, 5, 6.
 ```
+> Steven Reale describes barriers that prevent players from hearing World of Warcraft’s music in two broad categories: synchronic barriers (at a given moment in the game) and diachronic barriers (developing over patches/expansions). Here are the main ways those barriers work, with examples from the sources:
+> 
+> - Synchronic barriers (present at a specific time or context)
+>   - Faction and location boundaries: Certain music cues are tied to a faction or to a particular place. For example, the Orgrimmar entry cue is heard by Horde players, while Alliance players may never hear it; likewise, Alliance has its own Brewfest polka, which Horde players may not hear. These create coarse synchronic barriers that can be very concrete (who you are and where you are) at a given moment. Source 4; Source 3.
+>   - Zone-specific music you must physically be in: Some pieces (like Terrokar Forest music) only play in specific zones, and even in-game menus or rolls don’t always let you hear them unless you travel there. The Terrokar Forest cue does not appear on a music roll; you must travel to Outland to hear it. Source 7.
+>   - Time- and activity-driven barriers (incentives push you away from listening): The game’s incentive structure pushes players toward higher-level zones and reward-rich content, which can pull attention away from listening to the score. This “coarse synchronic barrier” is created by how players are guided to play. Source 5.
+>   - End-game gating and gating by progression: Some music accompanies encounters (like Kil’jaeden) that require reaching certain raid progress. If you can’t/ don’t progress to that content, you miss hearing that music. Over time, later expansions can make these encounters easier to reach (reducing the barrier for some players, but the barrier exists in earlier periods). Source 5; Source 1.
+> 
+> - Diachronic barriers (develop over patches/expansions)
+>   - Content updates and expansion cycles: The MMORPG model of ongoing expansions creates diachronic barriers because the game is continually updated, and older music may become unavailable or relocated as content changes. For instance, The Burning Crusade added new zones and music and created a diachronic barrier to listening to older content (e.g., Silithus music). Source 1; Source 6.
+>   - Music’s indeterminacy across playthroughs: Because WoW’s music can be renegotiated with each play session and patches, a score once heard may not be heard again in the same way, meaning the opportunity to hear certain pieces is inherently unstable over time. Source 2.
+>   - Phase changes and housing systems changing listening access: Blizzard’s phasing and the garrison system alter what players can see/hear; even with new features like jukeboxes in garrisons, some music (like Terrokar Forest cues) isn’t fully available via simple in-game rolls and still requires traveling to certain areas. This represents a diachronic shift in how accessible music is over time. Source 7; Source 4.
+> 
+> - Additional nuance
+>   - The score’s overall instability and renewal: Since World of Warcraft’s soundtrack is tied to a dynamic game world that is frequently revised, what can be heard and when is inherently unstable across playthroughs and updates. This is framed as a broader indeterminacy about listening opportunities in WoW. Source 2.
+> 
+> In short, what prevents players from hearing the music are a mix of: being in the wrong faction or location (synchronic barriers), not visiting the right zones or engaging with certain activities (synchronic barriers), and expansions/patch cycles that relocate, retire, or alter access to music (diachronic barriers). The result is that many pieces of music are accessible only to a subset of players at certain times, or may not be heard at all across a given playthrough. Source references: 2, 4, 3, 7, 1, 5, 6.
 
 Here, the query doesn’t use exact phrases from the paper, but the embedding search still pulls the right chunks.
 
@@ -230,66 +194,46 @@ Here, the query doesn’t use exact phrases from the paper, but the embedding se
 **Best for:** cross-work / comparative questions, conceptual questions, and queries that benefit from the curated knowledge graph (works, games, concepts, performances, etc.).
 
 ```
-$ npm run dev
-
-> rag-demo@1.0.0 dev
-> ts-node  -r tsconfig-paths/register src/index.ts
-
-RAG playground starting...
-Enable verbose mode? [y]/n: n
-Disabling verbose mode.
-
-Select retrieval mode: [1] keyword, [2] embedding, [3] graph (default): 3
-Using retrieval mode: graph
-
-Loaded 7 research document(s).
-
-Created 395 chunk(s) total.
-
-Computing embeddings for all chunks / loading cache...
-Loaded embeddings from cache.
-Embedded 395 chunks.
-
 Enter a search query (or press Enter to exit): Provide a survey of Reale's approaches to analyzing video game music.
 Querying...
 === Model answer ===
-Steven Reale surveys several interlocking approaches for analyzing video game music, all driven by the central problem that game scores are often dynamic, indeterminate, and ever-changing. The key strands across his work can be summarized as follows:
-
-- Treat game music as a dynamic, indeterminate phenomenon that requires new analytic tools
-  - Reale argues that traditional music-theoretical methods—built around fixed scores played through the same way each time—need to be reworked to handle the indeterminacies of game scores. He describes analytic practice as “a space of theoretical potentialities, rather than a compendium of musical practicalities,” and calls for approaches that pair theoretical potentialities with practical musical potentialities when algorithmic systems govern continuations through moments of indeterminacy. This foundational stance recurs across his discussions of game music (Source 1; see also Source 7 and 8 for methodological framing).
-
-- Apply and refract traditional analytic traditions to game contexts, recognizing three adapted methodologies
-  - In Analytic Traditions and Game Music, Reale explicitly notes applying three traditional analytic methodologies to a genre that is often dynamic and indeterminate. He emphasizes that these methodologies must be refracted to account for the game’s design logic, so that they can analyze music as both theoretical potentialities and practical outcomes within algorithmically guided play (Source 7). He explicitly frames this as “leveled-up” application: fixed-score theories are transformed to work with game-era music.
-  - He also foregrounds David Lewin’s functional/transformational mindset (as a touchstone) and cites Lewin’s Generalized Musical Intervals and Transformations as a toolset that can be adapted to game-music analysis (Source 8, footnote referencing Lewin; Source 1’s discussion of “space of theoretical potentialities” draws on Lewin-style thinking).
-
-- Ground analysis in diegetic/non-diegetic and dynamic/adaptive vocabularies, with case-specific taxonomies
-  - In his Mario Galaxy case study, Reale mobilizes the diegetic/non-diegetic distinction and the dynamic vs non-dynamic spectrum (with subdivisions into adaptive vs interactive) to categorially frame how game scores function. This framing shows how music can operate inside or outside a narrative frame while also responding to player actions. The approach foregrounds the need to study how scores adapt to indeterminate player behavior (Source 2).
-  - The broader methodological stance is to show how such taxonomies—diegetic/non-diegetic and dynamic/interactive/adaptive—can be used to examine how a score is designed to respond to nondeterministic gameplay.
-
-- Treat narrative function and filmic lineage as a productive analytic lens, especially for “music games”
-  - In Transcribing Musical Worlds, Reale asks whether certain games (e.g., L.A. Noire) function as “music games,” arguing that many video-game scores operate like film scores—designed to heighten emotion or commentary on a narrative, even as interactivity modulates when and how music is heard. He emphasizes examining how music is integrated with narrative branching and decision points rather than treating it as mere accompaniment. This narrative frame is extended by drawing on film-noir musical traditions when analyzing L.A. Noire’s score and its use within a branching, decision-driven game world (Source 3; Source 4).
-  - This approach situates game music within broader cultural and cinematic traditions, using interviews with designers and textual analysis to understand how composers and designers conceive music’s narrative function and how that function shifts when interactivity is introduced.
-
-- Attend to diachronic and synchronic barriers to listening; the listening experience as evolving across patches and expansions
-  - Reale develops a theory of barriers to listening that tracks both synchronic moments (a moment in the game’s lifetime) and the diachronic evolution of the game through patches and expansions. He argues that because game music is frequently renewed and revised, the listening experience itself is unstable and may never be heard exactly the same way twice. This diachronic lens complements the synchronic analysis of a given moment and foregrounds how patches alter the musical texture and player experience over time (Sources 5, 6).
-  - This approach reframes listening as something that can only be understood across the life of the game, not just in a single, fixed moment.
-
-- Integrate ethnographic and design-informed methods, including interviews with creators
-  - Reale supplements music-analytic work with designer interviews to illuminate why certain musical approaches were chosen and how designers think about categorization (e.g., whether a work is a “music game”). In his L.A. Noire discussions, he and others debate the very categorization of works as music games, illustrating how design decisions shape musical analysis and how the analysis must respond to those decisions (Source 4).
-  - This ethnographic dimension—gathering designer perspectives—helps calibrate analytic priorities (e.g., narrative function, interaction models) and grounds theory in actual development practice.
-
-- Position game music within improvised and uncertain musical practices
-  - A recurring claim in Reale’s work is that the indeterminate, algorithmically guided nature of game music aligns it with improvised musical practices. He argues that the indeterminate dimension of gameplay invites analytic tools from improvised and contemporary musics and that music theories can be “leveled up” or refracted to illuminate this convergence (Source 7). This position positions game music not as a failure of canonical score analysis but as a site where improvisational logics and real-time musical continuations can be studied alongside traditional notated practice.
-
-- Outcome and aims: a plural, adaptable toolkit for game-music analysis
-  - Across these strands, Reale’s survey of approaches yields a pragmatic, plural toolkit: combine theoretical potentialities with practical continuations; use diegetic/non-diegetic and dynamic/adaptive taxonomies; read music through narrative and film-noir lineage when appropriate; track listening across synchronic moments and diachronic patches; supplement analysis with designer testimony; and recognize the improvised, uncertain, and evolving character of game scores. The overall aim is to broaden music-theoretical practice so it can handle the dynamic, algorithmically governed, and narratively braided nature of video game music (Sources 1, 2, 3, 4, 5, 6, 7, 8).
-
-Notes on scope and naming
-- Reale explicitly references three methodologies used in Analytic Traditions and Game Music, but the provided excerpts do not name them in a way that can be quoted verbatim here. He signals that these methodologies must be refracted for game contexts and that traditional tools (notably Lewin’s transformational approach) provide a foundation to be adapted (Sources 7, 8; see also Source 1).
-- The Mario Galaxy case study and the L.A. Noire discussion are concrete instantiations of these aims: using established analytic vocabularies to describe game-specific phenomena, and using narrative and filmic lineage to interpret music’s function within interactive media (Sources 2, 3, 4).
-
-If you’d like, I can pull out specific passages that illustrate each of these approaches or map particular case-study findings onto the broader methodological themes above.
 ```
+> Steven Reale surveys several interlocking approaches for analyzing video game music, all driven by the central problem that game scores are often dynamic, indeterminate, and ever-changing. The key strands across his work can be summarized as follows:
+> 
+> - Treat game music as a dynamic, indeterminate phenomenon that requires new analytic tools
+>   - Reale argues that traditional music-theoretical methods—built around fixed scores played through the same way each time—need to be reworked to handle the indeterminacies of game scores. He describes analytic practice as “a space of theoretical potentialities, rather than a compendium of musical practicalities,” and calls for approaches that pair theoretical potentialities with practical musical potentialities when algorithmic systems govern continuations through moments of indeterminacy. This foundational stance recurs across his discussions of game music (Source 1; see also Source 7 and 8 for methodological framing).
+> 
+> - Apply and refract traditional analytic traditions to game contexts, recognizing three adapted methodologies
+>   - In Analytic Traditions and Game Music, Reale explicitly notes applying three traditional analytic methodologies to a genre that is often dynamic and indeterminate. He emphasizes that these methodologies must be refracted to account for the game’s design logic, so that they can analyze music as both theoretical potentialities and practical outcomes within algorithmically guided play (Source 7). He explicitly frames this as “leveled-up” application: fixed-score theories are transformed to work with game-era music.
+>   - He also foregrounds David Lewin’s functional/transformational mindset (as a touchstone) and cites Lewin’s Generalized Musical Intervals and Transformations as a toolset that can be adapted to game-music analysis (Source 8, footnote referencing Lewin; Source 1’s discussion of “space of theoretical potentialities” draws on Lewin-style thinking).
+> 
+> - Ground analysis in diegetic/non-diegetic and dynamic/adaptive vocabularies, with case-specific taxonomies
+>   - In his Mario Galaxy case study, Reale mobilizes the diegetic/non-diegetic distinction and the dynamic vs non-dynamic spectrum (with subdivisions into adaptive vs interactive) to categorially frame how game scores function. This framing shows how music can operate inside or outside a narrative frame while also responding to player actions. The approach foregrounds the need to study how scores adapt to indeterminate player behavior (Source 2).
+>   - The broader methodological stance is to show how such taxonomies—diegetic/non-diegetic and dynamic/interactive/adaptive—can be used to examine how a score is designed to respond to nondeterministic gameplay.
+> 
+> - Treat narrative function and filmic lineage as a productive analytic lens, especially for “music games”
+>   - In Transcribing Musical Worlds, Reale asks whether certain games (e.g., L.A. Noire) function as “music games,” arguing that many video-game scores operate like film scores—designed to heighten emotion or commentary on a narrative, even as interactivity modulates when and how music is heard. He emphasizes examining how music is integrated with narrative branching and decision points rather than treating it as mere accompaniment. This narrative frame is extended by drawing on film-noir musical traditions when analyzing L.A. Noire’s score and its use within a branching, decision-driven game world (Source 3; Source 4).
+>   - This approach situates game music within broader cultural and cinematic traditions, using interviews with designers and textual analysis to understand how composers and designers conceive music’s narrative function and how that function shifts when interactivity is introduced.
+> 
+> - Attend to diachronic and synchronic barriers to listening; the listening experience as evolving across patches and expansions
+>   - Reale develops a theory of barriers to listening that tracks both synchronic moments (a moment in the game’s lifetime) and the diachronic evolution of the game through patches and expansions. He argues that because game music is frequently renewed and revised, the listening experience itself is unstable and may never be heard exactly the same way twice. This diachronic lens complements the synchronic analysis of a given moment and foregrounds how patches alter the musical texture and player experience over time (Sources 5, 6).
+>   - This approach reframes listening as something that can only be understood across the life of the game, not just in a single, fixed moment.
+> 
+> - Integrate ethnographic and design-informed methods, including interviews with creators
+>   - Reale supplements music-analytic work with designer interviews to illuminate why certain musical approaches were chosen and how designers think about categorization (e.g., whether a work is a “music game”). In his L.A. Noire discussions, he and others debate the very categorization of works as music games, illustrating how design decisions shape musical analysis and how the analysis must respond to those decisions (Source 4).
+>   - This ethnographic dimension—gathering designer perspectives—helps calibrate analytic priorities (e.g., narrative function, interaction models) and grounds theory in actual development practice.
+> 
+> - Position game music within improvised and uncertain musical practices
+>   - A recurring claim in Reale’s work is that the indeterminate, algorithmically guided nature of game music aligns it with improvised musical practices. He argues that the indeterminate dimension of gameplay invites analytic tools from improvised and contemporary musics and that music theories can be “leveled up” or refracted to illuminate this convergence (Source 7). This position positions game music not as a failure of canonical score analysis but as a site where improvisational logics and real-time musical continuations can be studied alongside traditional notated practice.
+> 
+> - Outcome and aims: a plural, adaptable toolkit for game-music analysis
+>   - Across these strands, Reale’s survey of approaches yields a pragmatic, plural toolkit: combine theoretical potentialities with practical continuations; use diegetic/non-diegetic and dynamic/adaptive taxonomies; read music through narrative and film-noir lineage when appropriate; track listening across synchronic moments and diachronic patches; supplement analysis with designer testimony; and recognize the improvised, uncertain, and evolving character of game scores. The overall aim is to broaden music-theoretical practice so it can handle the dynamic, algorithmically governed, and narratively braided nature of video game music (Sources 1, 2, 3, 4, 5, 6, 7, 8).
+> 
+> Notes on scope and naming
+> - Reale explicitly references three methodologies used in Analytic Traditions and Game Music, but the provided excerpts do not name them in a way that can be quoted verbatim here. He signals that these methodologies must be refracted for game contexts and that traditional tools (notably Lewin’s transformational approach) provide a foundation to be adapted (Sources 7, 8; see also Source 1).
+> - The Mario Galaxy case study and the L.A. Noire discussion are concrete instantiations of these aims: using established analytic vocabularies to describe game-specific phenomena, and using narrative and filmic lineage to interpret music’s function within interactive media (Sources 2, 3, 4).
+> 
+> If you’d like, I can pull out specific passages that illustrate each of these approaches or map particular case-study findings onto the broader methodological themes above.
 
 Graph mode uses the knowledge graph to:
 
