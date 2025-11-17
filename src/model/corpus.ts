@@ -49,38 +49,38 @@ export function chunkDocs(
             const paraText = para + "\n\n";
 
             if (paraText.length > maxCharsPerChunk) {
-            if (buffer.length > 0) {
-                const spaceLeft = maxCharsPerChunk - buffer.length;
-                if (spaceLeft > 0) {
-                // first chunk = buffer + first slice of big para
-                const firstSlice = paraText.slice(0, spaceLeft);
-                pushChunk(buffer + firstSlice);
-                let start = spaceLeft;
-                while (start < paraText.length) {
-                    const end = start + maxCharsPerChunk;
-                    pushChunk(paraText.slice(start, end));
-                    start = end;
-                }
+                if (buffer.length > 0) {
+                    const spaceLeft = maxCharsPerChunk - buffer.length;
+                    if (spaceLeft > 0) {
+                    // first chunk = buffer + first slice of big para
+                    const firstSlice = paraText.slice(0, spaceLeft);
+                    pushChunk(buffer + firstSlice);
+                    let start = spaceLeft;
+                    while (start < paraText.length) {
+                        const end = start + maxCharsPerChunk;
+                        pushChunk(paraText.slice(start, end));
+                        start = end;
+                    }
+                    } else {
+                    // buffer is already "full", so flush it and slice para as before
+                    pushChunk(buffer);
+                    let start = 0;
+                    while (start < paraText.length) {
+                        const end = start + maxCharsPerChunk;
+                        pushChunk(paraText.slice(start, end));
+                        start = end;
+                    }
+                    }
+                    buffer = "";
                 } else {
-                // buffer is already "full", so flush it and slice para as before
-                pushChunk(buffer);
-                let start = 0;
-                while (start < paraText.length) {
+                    // no buffer, just slice the big paragraph
+                    let start = 0;
+                    while (start < paraText.length) {
                     const end = start + maxCharsPerChunk;
                     pushChunk(paraText.slice(start, end));
                     start = end;
+                    }
                 }
-                }
-                buffer = "";
-            } else {
-                // no buffer, just slice the big paragraph
-                let start = 0;
-                while (start < paraText.length) {
-                const end = start + maxCharsPerChunk;
-                pushChunk(paraText.slice(start, end));
-                start = end;
-                }
-            }
             continue;
             }
 

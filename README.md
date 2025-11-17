@@ -153,7 +153,7 @@ Querying...
 > 
 > In short: Structural fog functions as a vehicle for jouissance in groove-based performance. It creates a tense, expectancy-filled zone between familiar groove and inventive deviation. When the band snaps back into the groove, the release can be cathartic and intensely pleasurable, but if the deviation crosses the groove-principle threshold, the experience can become painful or anxiety-provoking. This dynamic helps explain why structural fog is a signature feature of the live groove experience and a key site of its psychoanalytic appeal. (Cited concepts across Sources 1, 2, 3, 6, 7, and 8.)
 
-You’ll see that keyword mode tends to stay within a single work and strongly favors literal matches like “listening” and “World of Warcraft”.
+You’ll see that keyword mode tends to stay within a single work and strongly favors literal matches like "jouissance" and “structural fog”.
 
 ---
 
@@ -184,7 +184,7 @@ Querying...
 > 
 > In short, what prevents players from hearing the music are a mix of: being in the wrong faction or location (synchronic barriers), not visiting the right zones or engaging with certain activities (synchronic barriers), and expansions/patch cycles that relocate, retire, or alter access to music (diachronic barriers). The result is that many pieces of music are accessible only to a subset of players at certain times, or may not be heard at all across a given playthrough. Source references: 2, 4, 3, 7, 1, 5, 6.
 
-Here, the query doesn’t use exact phrases from the paper, but the embedding search still pulls the right chunks.
+Here, the query paraphrases ("prevents players from hearing") but does not use exact phrases from the paper, and the embedding search still pulls the right chunks.
 
 ---
 
@@ -236,7 +236,7 @@ Querying...
 
 Graph mode uses the knowledge graph to:
 
-- Pull in the relevant **works** linked to “Katamari Damacy” and “World of Warcraft”.
+- Pull in the relevant **works** linked to video game analysis.
 - Expand through related concepts.
 - Restrict the embedding search to chunks from those works.
 - Balance the final context across them, which helps the model actually *compare* instead of just answering from one paper.
