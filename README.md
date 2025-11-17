@@ -86,7 +86,6 @@ Defaults are stored in `appConfig.ts`:
 export const MAX_CHARS_PER_CHUNK = 1200;
 export const MAX_CHUNKS_PER_QUERY = 8;
 export const MIN_CHARS_FOR_RETRIEVAL = 80;
-export const EMBEDDINGS_CACHE_PATH = path.join(process.cwd(), "data", "embeddings.json");
 export const EMBEDDING_MODEL_NAME = "text-embedding-3-small";
 export const CHAT_MODEL_NAME = "gpt-5-nano";
 ```
