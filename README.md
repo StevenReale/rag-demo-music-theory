@@ -317,7 +317,7 @@ Additional side-conversations:
 
 - [Cosine similarity refresher](https://chatgpt.com/share/691652ea-d424-8010-aacc-93cadf0d5de0)
 - [Corpus analysis and graph-structure design](https://chatgpt.com/share/69179671-620c-8010-8508-4d08ea9550d4)
-- [Code review thread TO DO](https://chatgpt.com/share/691a834b-219c-8010-9a3f-919e729969f0)
+- [Code review thread](https://chatgpt.com/share/691a834b-219c-8010-9a3f-919e729969f0)
 
 ---
 
