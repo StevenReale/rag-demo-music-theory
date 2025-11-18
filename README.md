@@ -330,4 +330,3 @@ Additional side-conversations:
 - Future directions I’m considering:
   - More robust embedding cache invalidation.
   - Better handling of multi-hop graph expansion.
-  - Experimenting with reranking / answer grading on top of the current retrieval.
