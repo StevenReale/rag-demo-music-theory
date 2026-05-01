@@ -1,4 +1,4 @@
-import path from "path";
+import * as path from "path";
 
 export const MAX_CHARS_PER_CHUNK = 1200;
 export const MAX_CHUNKS_PER_QUERY = 8;
